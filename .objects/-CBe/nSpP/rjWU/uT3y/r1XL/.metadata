@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Add/Update",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "r1XLljm5HEyeUYWbqvnTyQ",
+  "Reference": "OjMmxrw78k6OP_iuG1uXrQ/r1XLljm5HEyeUYWbqvnTyQ",
+  "ParentRef": "OjMmxrw78k6OP_iuG1uXrQ/uT3yAdvteUiDDszNURL6kw",
+  "Created": "2023-12-11T11:25:44.9311772Z",
+  "Updated": "2023-12-11T11:25:44.9311772Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

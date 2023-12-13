@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Summary",
+  "Type": "Element",
+  "TaxonomyType": "Tab",
+  "Id": "bOJ008EE60ilwbdFuI1svA",
+  "Reference": "OjMmxrw78k6OP_iuG1uXrQ/bOJ008EE60ilwbdFuI1svA",
+  "ParentRef": "OjMmxrw78k6OP_iuG1uXrQ/xI9nd8rHrEWqm4FYG9Q-pQ",
+  "Created": "2023-12-11T11:25:46.207969Z",
+  "Updated": "2023-12-11T11:25:46.207969Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

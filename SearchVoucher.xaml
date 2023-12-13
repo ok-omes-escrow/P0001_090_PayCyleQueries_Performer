@@ -1,0 +1,277 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SearchVoucher" this:SearchVoucher.in_strBU="13100" this:SearchVoucher.in_strVoucherID="01523077" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_strBU" Type="InArgument(x:String)" />
+    <x:Property Name="in_strVoucherID" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1488,2453</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>SearchVoucher_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Security</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="SearchVoucher" sap:VirtualizedContainerService.HintSize="1112,2348" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge: Voucher: Regular Entry" sap:VirtualizedContainerService.HintSize="1050,2237" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="81f0ae9e-c6f3-40a4-804d-e6680ec86e6d" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1016,2020" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Find an Existing Value'" sap:VirtualizedContainerService.HintSize="954,193" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/ENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL?PortalActualURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL&amp;PortalContentURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL&amp;PortalContentProvider=ERP&amp;PortalCRefLabel=Regular%20Entry&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsp%2fSOKLFTSTNSS%2f&amp;PortalURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2f&amp;PortalHostNode=ERP&amp;NoCrumbs=yes&amp;PortalKeyStruct=yes" ContentHash="6nWB6GUKe0q13w9obbo5yA" DesignTimeRectangle="32, 192, 193, 36" DesignTimeScaleFactor="1" FriendlyName="'Find an Existing Value'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='SPAN' aaname='*ind an Existing Value' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' aaname='*ind an Existing Value' class='' check:text='Find an Existing Value' /&gt;" Guid="3584a1f3-057a-4210-b025-5d9555862fe9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALoAAAAoCAYAAABJoOC5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPqSURBVHhe7ZjbatVAFIbzCH2y/VbxQtALKQWxvanuC32O3AoWC6UoFTGvsLUXhTFzXmvN5LRPbfb8Ax9tkjWnNV8m01YKBaWAAtFRiihM9G/f79TVpy/q1dsLABbJ63fv1eX1Z3Vze+estiWI/vXmVl1cfVT3Px/Uv8dH9fT0BMDi0O7e/3hQ5x+ujdO+BNH1W/Dr959sZQCWhnZZO+1LEP3N+aXabP5mKwGwNLTL2mlfguj6fJOrAMBS0U77AtHByQLRQRFAdFAEEB0UAUQHRQDRQRFAdFAEEB0UwRFEb9V6VamqyrNat11Mo+ru97rJ1Z9GU3ft1U322f4ZnlNV1arJ1qPMnXOjGh/brtWqWql1S5/vB5PHofE3tZnj2LiPux7jHE10K3Tu+X54DtEPPafI7hvBZMxL1N+XyfNqrdrMMwpEPxAQfV+4r1VWZjuOKfOG6Fn4QvokmZ/dfYNIvHy2HkksizeQT78/CjR2N/Mx/WJNE932SY8YVCIpr72O4/PHB3Ffz5EdXXw7PE6ObVa+zPEkPRq161V3343L7fyhTQ1pz/Tnrk09sX7JPdnewFpuw8sVnVz7574NlvBw3Z+cNNFi1/JJJjGyD8400WU/vE0657Q9KorMT050NlYh6tx8yXxb3FxMHTEejTi7zxI9ebFoX7HOLhxNdJNYSc9CmiSJxMTEZZK8RWJYop3orE0mk2RgTh1MEN92Lf+Io/PIiUURc86IzuumbbO5TciXfDmG86Hh/cwRXccmcx/tbx4vd0cXixDu9SQgVyfB7ToBJrpoczDRU+YUsdLI8fE5hxiD/JIIWdnYciKTe9vmy9QT4xOy5l54H0/bHxZ9aNPoy/98ihA9ShTrseTn2uzpxzJPdDM23T9b7Jyg8b4db+6Y08HGlmuH3NsiX54YI/sgYwxt8Bja/rDott7UXG7L8kRPkq5xu4KoQ5/J/k17xxA9nF3lgubmQaHPRewc0bPPh/JFMGPvXjb/U96nsWZMsZ8x0WP+J45lRxYout+hY6LtdV+y0kSG+IOLbucV4owgOUFFXIj1cxT9zRJ9br4oLncyls1DY/uzL7S9x9bQxJMxupci5F8+75Bj3pVFiq4Ji+USNvzvxbgQPr6li7Wl6KG9BF3PxfjFdJh5mAUUgvrFZ23EeuzlnCm6xvbrGM1XxPab5oHl3/Tl5uvaHFuvRl/T3DjZI/uTXHME0cFLRIs4/kU6HQ4q+mazEW9pytnZWbYu2Bd2d0+PRX1fq9MEO3oJjByLSgCigyKA6KAIIDooAogOigCigyKA6KAIIDooAogOigCigyJgousLAE6dsKOjoJxuUeo/TiL7IXs4WrsAAAAASUVORK5CYII=" InformativeScreenshot="0f6e1534d6feac177eacc626541748ae.png" Reference="ao86_PT9xkmS2L7lE3WumQ/kOagFahDc027htfqVIgKHQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Regular Entry' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="18, 117, 1843, 23" ElementType="Text" FriendlyName="'Voucher'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='app_label' tag='H1' aaname='Voucher' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='app_label' tag='H1' aaname='Voucher' type='' class='PSSRCHTITLE' check:text='Voucher' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAABzcAAAAbCAYAAADxjgKIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMLSURBVHhe7d3bbcIwFIBhNsxYGYVRGIUx0nIpPsfYuVRqIej7JL8EY8zzLzuHCQAAAAAAAGAHxE0AAAAAAABgF8RNAAAAAAAAYBfETQAAAAAAAGAXxE0AAAAAAABgF+5x8zwdh8N0ONzGeLo9fRbnDdPxfH/8Bs7HYcX+AQAAAAAAgL16nNyMcfDQq4Pn4zT8zBmO0xu1TXETAAAAAAAAPly5lnZFuIwBcXinY5vfxE0AAAAAAAD4bOGdm0tXzsbPx+nd+qG4CQAAAAAAAJ8txM2Fk5nxZGddD0/j43vd78/F0bm1L1asX8fN05jnt4NnftfodTQmlrWG6XgKe33DyAsAAAAAAACfKsXNFBmrq2l7JyPriJhGWuN3cXN2/TA37q838tKnaWzMuY7qv3f30AihAAAAAAAAwN/IcTMFyHg1bSdMxhOVndBYTlj+Im42189R8udxjpvLeyzBsj03ngxNcbPzPlIAAAAAAADgb1VxsxMmm/FxJlY2P9saN/vzb3tsPbvNz1fWhhj6EybD79XX2z5CZoiYMW6GPgoAAAAAAAD8o6e4mULjPfDFcFjaY+e05d3zd7bGzUaUnNHc41VjncY7PJ9H2WOJm/E0KwAAAAAAAPCfnuNmipCXmNeJkh8fN0vIFDcBAAAAAADg9RpxM4fCYRzbEfND4mZ9LW2LuAkAAAAAAACv14ybKTaGkaPhTKxsfhafVZEwnqR8/MjM+tf5eY1NcXMhzNbETQAAAAAAAHi9dtxMYfE+GqcnY1CMkTCd/Aw1sETC+DzEx8uIsXExepZ1NsXNao2ydDt6ipsAAAAAAADwep24mWPhZfSub43B8mnUQXTNuy5zmVy9/ra4+a1zOvU2csQUNwEAAAAAAOD1unEzx7+FqNcIhVWjLOrAeZm4dE1sI4rWsXVz3Lxad0JV3AQAAAAAAIDX68dNAAAAAAAAgDcibgIAAAAAAAC7IG4CAAAAAAAAuyBuAgAAAAAAALsgbgIAAAAAAAC7IG4CAAAAAAAAuyBuAgAAAAAAADswTV80K2fzOjeudgAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="Button 'Clear'" Mode="Appears" Retry="True" Timeout="5">
+                  <uix:VerifyExecutionOptions.Target>
+                    <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/ENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL?PortalActualURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL&amp;PortalContentURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL&amp;PortalContentProvider=ERP&amp;PortalCRefLabel=Regular%20Entry&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsp%2fSOKLFTSTNSS%2f&amp;PortalURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2f&amp;PortalHostNode=ERP&amp;NoCrumbs=yes&amp;PortalKeyStruct=yes" ContentHash="ES__VPk2oUeq5cM-qkaoOQ" DesignTimeRectangle="126, 926, 35, 16" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Clear'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' aaname='Clear' class='PSPUSHBUTTONTBCLEAR' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' aaname='Clear' class='PSPUSHBUTTONTBCLEAR' type='button' check:text='Clear' /&gt;" Guid="4cd13f23-e771-4b27-abb7-9393fcd53e8d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACcAAAAUCAYAAAAOTSQ2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEZSURBVEhL7ZXRDYMgEIY7TBdzAocwbuEIbOAATXwx+uCrr0aHuNbjwDugWmxqbOKf8AAH8t3PgTc4sS64vfo3uB6y9AF31pJyophWXbzGi556v5OAG8sKYbKWBlAEy2COhxs6SDwwkhM7HA5dyzsYqb8mD47gbSk44Difx9MK1EBBXNuAolObGYwsXIwbYm7byM1gApUvcT9pipsxk1hgbwHnFv47cbjgOtyQA0sJYKdkuL50jlywx8WbA4cOs7iACyfycc1xhxY4fZPXHDcvAIf1nduAMxvF3VZZX750PPhOxsEtWUrAjXeOjouv0d9poA7AWydj4VDkkj4K3YKZc7fcekIwI+ePM0PxGx4FdyJdcHt1we0TwBMFHW47H6u7cAAAAABJRU5ErkJggg==" InformativeScreenshot="d2505be4008a5b0b559faad5c0af54e9.png" Reference="ao86_PT9xkmS2L7lE3WumQ/uqcBT-ORkEykLISlWVVDdQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Regular Entry' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target DesignTimeRectangle="185, 926, 90, 16" ElementType="Text" FriendlyName="'Clear'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='A' aaname='Basic Search' class='PSHYPERLINK PSHYPERLINKCPHPSRCH' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='A' aaname='Basic Search' class='PSHYPERLINK PSHYPERLINKCPHPSRCH' type='' check:text='Basic Search' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF4AAAAUCAYAAAAEEYpkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH7SURBVFhH7ZbJjQIxEEUnGBIjAoJAZEEIZEAAI3FBcODKFUEQnnZ5qdW9AN2eg7/kQ3sp/3ouG35cUxU18JXUwFdSA19JDXwllcFfL261+dVtd3PPOOVjPW5uvTm5wyN+T9bLHXYz+ntHI3MaAH9x5/gZFBOtnRzo7rYd6PXxFb+Dznt/ANL3gpoHfKdS/9Iq+ggHsr3Gz6W1HHjjuveOE1PKZM9cKfAxnCAI5mJc+5bQhnGfx5Nb7W/ZV14rYq7299CfcjrSce3zraeGVhOYTpuCQsWlPjkOiaSnioHXzxjMNavaSxwS84DSMfgTxfyAuI+wXtygCB37SEzIaTiP6T+uXZMVI4WwYxIFKAy8qv6RMnyiP10oILOoUPQwLGi62IgieLankdvkp8asgE6pP7dkjIERYKmhARjjhLcg+Iu3z2xiL3mAFLxxI4rFZxXQN8DLjfF9xLl2RSCUfABfB+8V9/H7Q3yj4omwYBAMhf1PwVv/IEjipsh6asgyXFT/Hnjw/D3XsiHC+iL4MU/NHOBZv04s3wAwZgAqwh6YKwU+DKhiTahoHgPB6j3zDegBH/Y2Yvo4lmej740fV3EYEJSMd5sH8/xwaIx8Q5ShCCLPFQkoWW+4LpYMMzUGUsTwYwSsCd5L8kmH9zH4plnVwFdSA19JDXwVOfcHM1GIwKK/36wAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:VerifyExecutionOptions.Target>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NCheckState DisplayName="Check App State 'Search'" sap:VirtualizedContainerService.HintSize="954,1310" sap2010:WorkflowViewState.IdRef="NCheckState_1" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,1093" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Clear'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/ENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL?PortalActualURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL&amp;PortalContentURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL&amp;PortalContentProvider=ERP&amp;PortalCRefLabel=Regular%20Entry&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsp%2fSOKLFTSTNSS%2f&amp;PortalURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2f&amp;PortalHostNode=ERP&amp;NoCrumbs=yes&amp;PortalKeyStruct=yes" ContentHash="ES__VPk2oUeq5cM-qkaoOQ" DesignTimeRectangle="126, 926, 35, 16" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Clear'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' aaname='Clear' class='PSPUSHBUTTONTBCLEAR' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' aaname='Clear' class='PSPUSHBUTTONTBCLEAR' type='button' check:text='Clear' /&gt;" Guid="4cd13f23-e771-4b27-abb7-9393fcd53e8d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACcAAAAUCAYAAAAOTSQ2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEZSURBVEhL7ZXRDYMgEIY7TBdzAocwbuEIbOAATXwx+uCrr0aHuNbjwDugWmxqbOKf8AAH8t3PgTc4sS64vfo3uB6y9AF31pJyophWXbzGi556v5OAG8sKYbKWBlAEy2COhxs6SDwwkhM7HA5dyzsYqb8mD47gbSk44Difx9MK1EBBXNuAolObGYwsXIwbYm7byM1gApUvcT9pipsxk1hgbwHnFv47cbjgOtyQA0sJYKdkuL50jlywx8WbA4cOs7iACyfycc1xhxY4fZPXHDcvAIf1nduAMxvF3VZZX750PPhOxsEtWUrAjXeOjouv0d9poA7AWydj4VDkkj4K3YKZc7fcekIwI+ePM0PxGx4FdyJdcHt1we0TwBMFHW47H6u7cAAAAABJRU5ErkJggg==" InformativeScreenshot="d2505be4008a5b0b559faad5c0af54e9.png" Reference="ao86_PT9xkmS2L7lE3WumQ/uqcBT-ORkEykLISlWVVDdQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Regular Entry' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="185, 926, 90, 16" ElementType="Text" FriendlyName="'Basic Search'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='A' aaname='Basic Search' class='PSHYPERLINK PSHYPERLINKCPHPSRCH' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='A' aaname='Basic Search' class='PSHYPERLINK PSHYPERLINKCPHPSRCH' type='' check:text='Basic Search' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF4AAAAUCAYAAAAEEYpkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH7SURBVFhH7ZbJjQIxEEUnGBIjAoJAZEEIZEAAI3FBcODKFUEQnnZ5qdW9AN2eg7/kQ3sp/3ouG35cUxU18JXUwFdSA19JDXwllcFfL261+dVtd3PPOOVjPW5uvTm5wyN+T9bLHXYz+ntHI3MaAH9x5/gZFBOtnRzo7rYd6PXxFb+Dznt/ANL3gpoHfKdS/9Iq+ggHsr3Gz6W1HHjjuveOE1PKZM9cKfAxnCAI5mJc+5bQhnGfx5Nb7W/ZV14rYq7299CfcjrSce3zraeGVhOYTpuCQsWlPjkOiaSnioHXzxjMNavaSxwS84DSMfgTxfyAuI+wXtygCB37SEzIaTiP6T+uXZMVI4WwYxIFKAy8qv6RMnyiP10oILOoUPQwLGi62IgieLankdvkp8asgE6pP7dkjIERYKmhARjjhLcg+Iu3z2xiL3mAFLxxI4rFZxXQN8DLjfF9xLl2RSCUfABfB+8V9/H7Q3yj4omwYBAMhf1PwVv/IEjipsh6asgyXFT/Hnjw/D3XsiHC+iL4MU/NHOBZv04s3wAwZgAqwh6YKwU+DKhiTahoHgPB6j3zDegBH/Y2Yvo4lmej740fV3EYEJSMd5sH8/xwaIx8Q5ShCCLPFQkoWW+4LpYMMzUGUsTwYwSsCd5L8kmH9zH4plnVwFdSA19JDXwVOfcHM1GIwKK/36wAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Business Unit Input'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,254" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="[in_strBU]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/ENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL?PortalActualURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL&amp;PortalContentURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL&amp;PortalContentProvider=ERP&amp;PortalCRefLabel=Regular%20Entry&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsp%2fSOKLFTSTNSS%2f&amp;PortalURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2f&amp;PortalHostNode=ERP&amp;NoCrumbs=yes&amp;PortalKeyStruct=yes" ContentHash="KT2b5smQ4EGuY6uG1VtipQ" DesignTimeRectangle="292, 327, 207, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'99999'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl class='PSPAGECONTAINER' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tag='INPUT' aaname='Business Unit' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl class='PSPAGECONTAINER' tag='TABLE' /&gt;&lt;webctrl tag='INPUT' aaname='Business Unit' type='text' class='PSEDITBOX PTCPEDITBOXWITHICON ' /&gt;" Guid="a082035d-8243-4870-8b19-ceb16dc967f6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANMAAAAiCAYAAADFyexlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAM6SURBVHhe7Zxdc6IwFIb9Hdy0Wmt7UcbxY5XVrl3punUcsX7U//9Tsj0hiQEOJGzple/FMwrvAW7yzEmiQ+t8PgsAwNeBTAA0REam19VfMfoRibA/BABUQJ6QL7Y/RiYKZvNfYvf+nikAABQhT35++vL65yKUkYlMg0gA+LPfH6Q3+tjIRK1LfwcA+GF7A5kA+AKQCYCGgEzgqkmSRMxmMwMdc3U+QCZwlRwOBzEYDMTNzU2B4XAoc+66KiATuDqOx6Po9XqsSJrHx0dxOp3Y68uoJ1McilarZQjjfE0sQitvhXHNPBFRYOVBJJJaOQBuRqORkabT6Yjn52exWq3k593dnckmkwl7fRn+MimRLgKlYuSPbUHi0D525UoUS5AkCqxjVw6AG1oTaVm63a7Y7/eZnKZ3umvd3t4W8iq8ZcoOfAUJpgezlC0UsZ1LgQIRJR55EolAfzd5KpAU1pWbcwCUs1gsjEwvLy9sTRzHpoa+czUc3jLRoA2i3E6HHOCpIHyXuAx2V87Llkosn+vKc+cB4JjP50aU9XrN1my3W1NDUz+uhuPrncnZeapksPKKziOf68rNOQDKoW6kRSnrTG9vb6bmWzpTKoM9pVID2Qzw4ppIdiMtizNX97O7l3pmeo0rV+cAqGC32xlRaG308fFRqLG3zL9lzSTRg1fyKVGc7xZKGEUQxVKAyzTMlWtBFZ+SsJsUpTkAbuzdvKenJ7HZbIxU9jTw4eGBla2MejLlYaduNqk85RsErjyV5yJb3RyAIvQ70/39vZGmCvoBl7sHh7dM3AZCpitwaxpbNlfOiZW5xpUD4A9N3/r9PisQTfNoW1wfj8dj9h55/DuTHLjWYJYi2ANZTcHMlCsd/IUpXGmu5DTC5uvdOQB1oZ07/b+85XIp11R0nnb6bKGm02nh2jz+MhH5NVOhI6SC6Jri9MuVK0F0TUEUVw5Ac9Cuni1U2Va6pp5MAFwZJFS73fbaIodMADjw/Qc5ZAKgISATAA0BmQBoCMgEQENAJgAagpUJL6EEoB7H44l/CSW9Hple9wqhAHBDIv1exvzrkQkKyDRqXQCAcsgTWyQiIxMA4P+BTAA0wln8A0c6Pqd07Oj7AAAAAElFTkSuQmCC" InformativeScreenshot="96ff10abb3b49c3ab8bdb5c3a60c730f.png" IsResponsive="True" Reference="ao86_PT9xkmS2L7lE3WumQ/noEJ4tx0X0-JGD7nAyWGIw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Regular Entry' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="69, 333, 98, 16" ElementType="Text" FriendlyName="'Business Unit'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl class='PSPAGECONTAINER' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tag='LABEL' aaname='Business Unit' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl class='PSPAGECONTAINER' tag='TABLE' /&gt;&lt;webctrl tag='LABEL' aaname='Business Unit' type='' class='PSSRCHEDITBOXLABEL' check:text='Business Unit' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGYAAAAUCAYAAAB/NUioAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHbSURBVGhD7VWLrYQgEHx1WoydUIl12IRN8PgI7BcX717CS5hkkvOEZWdm1R+/MCVWMJNiBTMpVjCTAgVzus1vm8L98Ne97js4vUu1Xfg1L65jT/r3g6q//LFnb5xZgF2zPZhIewcGrGAKou+0hhgMO+g6/P4PTPwLfDcYCr3GWDDldUavE4RpOF2q17j7po+uB9d1EDJxP01MJhkWsvd5f2DHWXswlv6hZqEP4OfAqwyYagmGhVJYjNSCkVjWCGLgfSGUzNK7tl8yPmM8GImS5q8FE0kMsASjTqMeTDWhGn0bW2qCc5FxYl8QxQz45PbxJhi1f6aZ1miwvcrAoemeJRiwpxIV1tZD07CRxSSRubHuFEbwGv2QxoPR++eaPw6m3UOTWQ8IkP5LoAFpTdLriNFgCnhAVBOrJYkOqOvYfS0YvX++5uNgmrnpHntEgQAWTAMKlzVpECa8yp6gG3tDHagb4FuJStT/NdMjnoKJZYTaAe++MfUAiXmNPt1akxZhbcIokzBgImUW3ulbC65zZmLdZ+mfr0Geg4EbCAYeGFAnLdOdQmOCUU0/XW8RFsGNQp6SviLx90Ew2vAESt7guu+CwR61/1EwC/NgBTMpVjCTYgUzKVYwU8L7X/uifm+IN4d0AAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                    <uix:NTypeInto.VerifyOptions>
+                      <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[in_strBU]" Mode="Appears" Retry="True" Timeout="3" />
+                    </uix:NTypeInto.VerifyOptions>
+                  </uix:NTypeInto>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Voucher ID Input'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,254" sap2010:WorkflowViewState.IdRef="NTypeInto_2" Text="[in_strVoucherID]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/ENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL?PortalActualURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL&amp;PortalContentURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL&amp;PortalContentProvider=ERP&amp;PortalCRefLabel=Regular%20Entry&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsp%2fSOKLFTSTNSS%2f&amp;PortalURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2f&amp;PortalHostNode=ERP&amp;NoCrumbs=yes&amp;PortalKeyStruct=yes" ContentHash="0gnmzmFYbkWvklasofv0gw" DesignTimeRectangle="292, 374, 180, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT VOUCHER_SRCH_VW_V…'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl class='PSPAGECONTAINER' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tag='INPUT' aaname='Voucher ID' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl class='PSPAGECONTAINER' tag='TABLE' /&gt;&lt;webctrl tag='INPUT' aaname='Voucher ID' type='text' class='PSEDITBOX' /&gt;" Guid="0bd657d3-6c06-40f6-a2fc-5c6ee695db86" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALgAAAAiCAYAAADszhPiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADlSURBVHhe7dyxbQJBEIZRqickRIKIjITEdkAPJ4FEHTZuYe1Bx3FIUMD+ek+aZCf9tOEsGgQTONGeAh/Ol7bZ7dtytTamu6l2q+G5KfBaHD6O7fvnOr5AX6rdang4PSKfAq/6xU3vquFq+W4KvL54SDBvWeDEETjRBE40gRNN4EQTONEETjSBE03gRBM40QRONIETTeBEEzjRBE40gRNN4EQTONEETjSBE03gRBM40QRONIET7WXgLluR4O1lq9ttws+6Tfg7vkBfqt3D15vbhKUW2//664s3prepdudxl6fAIUtrf14RQde5OfGFAAAAAElFTkSuQmCC" InformativeScreenshot="39e9cc4de876e661b5101f9ab7affa81.png" IsResponsive="True" Reference="ao86_PT9xkmS2L7lE3WumQ/h5O3xNjr4ke_t3Px_-iMpg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Regular Entry' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target Accuracy="0.85" DesignTimeRectangle="91, 380, 76, 16" ElementType="Text" FriendlyName="'Voucher ID'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl class='PSPAGECONTAINER' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tag='LABEL' aaname='Voucher ID' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl class='PSPAGECONTAINER' tag='TABLE' /&gt;&lt;webctrl tag='LABEL' aaname='Voucher ID' type='' class='PSSRCHEDITBOXLABEL' check:text='Voucher ID' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFAAAAAUCAYAAAAa2LrXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGvSURBVFhH7ZXrsYMgEIVvnRZDJ1RCHTZhE1xQln1wVAxJJj84MzuZAB52P1j9i1NDmgAHNQEOagIcVAG4Rr8scVlcDNsxorT6NJfm/VoGPqstuH0/B5N5r1af6+a9aG8UqPx6A62RFM19id/PAsxhc+IW3kJ0eZELUS05G/+gfgGg3ZvB+tSvLPEO3GJweYFu49aQ2p1Cr0e3FSZFrwUK8YBcz4nrNbuMh/Rnj1DztVCyegFmodrUR6R92ECl2wiCTLsAWngU5aG63h2/Mu48LAgZln/WE4BoTgFMduW0yjUlYGVn2ky2c020jN0DpEORieh9uXhulzq2G7MH73PvgfQKQNkJBqAGoGHgFufEj/F7gOaQgFCiyViMkQeKIw/oAfR2gJyoN4U+AygT0GP9AFURLwJEIKSeAES1tQBNcnIxGfS0MJ8S+x1eVy18UbwCiFpY6+0A6ztXHzwAyCbNbev4iPCzbdSkajImyiHcAxT/bVx5AJ0BPAvrBwFWUOKmsWz72JbmpPZIHusVELGOZrsAZj31AOoH2NaZhQFOdWsCHNQEOKgJcFAT4JBi/AeyenOWXge1fwAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                    <uix:NTypeInto.VerifyOptions>
+                      <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[in_strVoucherID]" Mode="Appears" Retry="True" Timeout="3" />
+                    </uix:NTypeInto.VerifyOptions>
+                  </uix:NTypeInto>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Search'" sap:VirtualizedContainerService.HintSize="388,193" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/ENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL?PortalActualURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL&amp;PortalContentURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL&amp;PortalContentProvider=ERP&amp;PortalCRefLabel=Regular%20Entry&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsp%2fSOKLFTSTNSS%2f&amp;PortalURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2f&amp;PortalHostNode=ERP&amp;NoCrumbs=yes&amp;PortalKeyStruct=yes" ContentHash="73WNkgg42kmtMzMKNeJOZw" DesignTimeRectangle="37, 926, 46, 16" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Search'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' aaname='Search' class='PSPUSHBUTTONTBSEARCH PSPRIMARY' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' aaname='Search' class='PSPUSHBUTTONTBSEARCH PSPRIMARY' type='button' check:text='Search' /&gt;" Guid="af10c1bb-e553-4b45-a03a-73ceb3a7a49d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADIAAAAUCAYAAADPym6aAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFRSURBVFhH7VNLDoJADPUw3s9DcB3jNYQzYOLWuGPDhkVl2kI/UwySaJDQ5CUwn857r+3heLrCFrALWRu2KuQOZQs22gYKc+bXeMKtp3Groj2BEkIXmvpuDpwfqAbOau23+FRIlUoREZ6X6HtYJKSD8mIPhMCzEnEVdai8lwaa3rCy7mhraF2XEx5PzsdC6nRPwgtTreXmY0xkUSABXTnbkrhv5orzDmsoxOVnEUJO56Rv82Zguhv2Ht6ZPsRxIpWVGe9Mz5ERx0J0DqzghHHeKL2mc+RCDKRKdGlwJwonxBtihGg36Q3fnoKc9AIhCSwmORa46UGtl0LI5hX5opCRLP9rSOkpwfSjMSm8PylkXmvNrwi3QkbSPUyOB0SQqKoe740VeiMkGl5v3nwh6oCNfIilfTgGkgiXI+1popGQBD9ToxmLhPwvdiFrwy5kXbjCC2/yUY1AWpz5AAAAAElFTkSuQmCC" InformativeScreenshot="8f7fd006d0c48f9dc69691edb458be23.png" Reference="ao86_PT9xkmS2L7lE3WumQ/W57N7q5Bwk-TZ_xRwv2N8A" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Regular Entry' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="185, 926, 90, 16" ElementType="Text" FriendlyName="'Basic Search'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='A' aaname='Basic Search' class='PSHYPERLINK PSHYPERLINKCPHPSRCH' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='A' aaname='Basic Search' class='PSHYPERLINK PSHYPERLINKCPHPSRCH' type='' check:text='Basic Search' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF4AAAAUCAYAAAAEEYpkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH7SURBVFhH7ZbJjQIxEEUnGBIjAoJAZEEIZEAAI3FBcODKFUEQnnZ5qdW9AN2eg7/kQ3sp/3ouG35cUxU18JXUwFdSA19JDXwllcFfL261+dVtd3PPOOVjPW5uvTm5wyN+T9bLHXYz+ntHI3MaAH9x5/gZFBOtnRzo7rYd6PXxFb+Dznt/ANL3gpoHfKdS/9Iq+ggHsr3Gz6W1HHjjuveOE1PKZM9cKfAxnCAI5mJc+5bQhnGfx5Nb7W/ZV14rYq7299CfcjrSce3zraeGVhOYTpuCQsWlPjkOiaSnioHXzxjMNavaSxwS84DSMfgTxfyAuI+wXtygCB37SEzIaTiP6T+uXZMVI4WwYxIFKAy8qv6RMnyiP10oILOoUPQwLGi62IgieLankdvkp8asgE6pP7dkjIERYKmhARjjhLcg+Iu3z2xiL3mAFLxxI4rFZxXQN8DLjfF9xLl2RSCUfABfB+8V9/H7Q3yj4omwYBAMhf1PwVv/IEjipsh6asgyXFT/Hnjw/D3XsiHC+iL4MU/NHOBZv04s3wAwZgAqwh6YKwU+DKhiTahoHgPB6j3zDegBH/Y2Yvo4lmej740fV3EYEJSMd5sH8/xwaIx8Q5ShCCLPFQkoWW+4LpYMMzUGUsTwYwSsCd5L8kmH9zH4plnVwFdSA19JDXwVOfcHM1GIwKK/36wAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="Element 'Summary'" Mode="Appears" Timeout="10">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Target>
+                          <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/ENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL" ContentHash="Uvs2_OVQkES3byVUk5gAgw" DesignTimeRectangle="304, 142, 102, 36" DesignTimeScaleFactor="1" FriendlyName="'Summary'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl tag='SPAN' aaname='*ayments' innertext='Payments' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='SPAN' aaname='*ayments' innertext='Payments' type='' class='' check:text='Payments' /&gt;" Guid="77539b50-a848-44ca-b039-7ef79d793564" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGoAAAAoCAYAAAAWsW/wAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJySURBVHhe7ZfdSsMwFID3AHuUPUvfql4IeiFjIG43017oc+RWcDgYQ5mIfYXpLgbHnqTN8rdKXbb2sBP4wCZNSM53cjp7wI1EY1FEmiXq5XUBk4cnuLgeMS1yeXML4+kjzOaL0owh6nk2h9HkHpbvK/jZbGC73TItgfFfvq1geDeVXrBpUWjw4/MrOJFpB/SBXrBpUVfDMazX38EJTDugD/SCTYvC2hh6mWkX9IKNRXUcFkUEFkUEFkUEFkUEFkUEFkWEI4vKIUt60OuFSCDLQ3OoIECIUP9xOImoJMu9sTxLClkpCKefBgLSItnScxDVxmHjcc6iROqUxt08kRbPSQa5MV/eyLJPjqeZVWbl3DyDRK/nlFprrCAVzljxvrDfUXtV+/bmufs314tAa6JkcKvSVwXGCKQqjWWfDII5bq+r1gpIN+Rasvesp4NbSTTm26XaSTJv//Fv3ElEWZmm+eP7ZB1eHVwLdwLj3zg/UO4N9JLHXLMUZQU6sB87MUxR8WntRoVRAdjJDMswg67HrFJTJ6oueUxRTuDrRLlrRi57SDdElRmMh9x3a3bP/prNRKmx2j01FmVgfqsiCuuEKPeGSPZ8R9LMD+K/blRdEA8RVSH3H+/fj+6IMg8lg4JZaQdLvVf0O1KbiSqey6z3xmt+3Nh9zrkC3yh/T4fRCVGIPJiUg+ChAyWqFOiu11gUYpYoiZsodaL8pNHPFU4yHcqRRUUmFMAz4aii+v2+nWUBBoNBcG4ImbURywkliNwoVcpifpypQUQUw6KIwKKIwKKIwKKIwKKIwKKIwKKIwKKIwKKIoEXhH0z30TeKW5cbwC+IicyPASKMQgAAAABJRU5ErkJggg==" InformativeScreenshot="07d47b983ddd85e56c6665353f4192ac.png" Reference="ao86_PT9xkmS2L7lE3WumQ/bOJ008EE60ilwbdFuI1svA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Regular Entry' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="25, 142, 104, 36" ElementType="Text" FriendlyName="'Summary'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl tag='SPAN' aaname='Summary' innertext='Summary' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='SPAN' aaname='Summary' innertext='Summary' type='' class='' check:text='Summary' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGwAAAAoCAYAAAAbrx+3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJoSURBVHhe7Zi9SgNBEIDzMFYW9rEXVMQXsMsLWEiEFGIVRVAxIFaWkYCkEKyEVHIQFRS0EBsrG/+wVizG27vb2b3dvWhylz0GZ+Er3Mzs3e43OwlWgAepwcKIjZSw4/4LzG/dwcRynymZyZVLmNu8he7la2InHijsKHiG6fUb2Om9w+nDF5w9fjMlIhxs996gunYduZEDhc2GNvfPP5zJTHkIJ8KNHChsavUKTu4/nUlMeQgnwo0cKEz0TVcCUz7CjRwsjAAsjBgsjBgsjBgsjBgsjBgsjBj+hHWbUKlUFDNt6LjimIH4EWbKYmkj40XYXj0WVG09xXMXbahG0hahcWHHM9l4FZZ9owKoRQKbsIdzT9CY0aSi5CY0WovxeoJ6EMXjM0Jq3WSNUXJSeQosNi2v1lJxC0vJnL6O7CzJ84rAizCrJVobGEbYX0jWGSUH38VEdQNdNH52aMtBsbrEnPgRFtLRKzxBVe1wwuQBqIMzDztHTjSnI9/DsUaqY5h7cO0pP96ExajNS+JDGEaYisEiwKouICeJy35XJUxvk/p8FDeGdijwLEyiDiPetKvKjbkBh68O7u/CMnOs4lHvagqTfyOapMyYnHgQ5pJhVqmM0TaI33t+hdk30H63bBkqNkY9tyi83DC5QRspUVVxZoyvG2b+QNL4XZix14LbocCLMAFWLiJlSdLVWW0F+Q9/lJxwzjp04/tokDD1zIzPc+JN2L/BUSRFwsIKBm/nGNqhgIUVhdYKx/k/UhZGDBZGDBZGDBZGDBZGDBZGDBZGDBZGDBZGDBZGjJSwjd0DYOiAN4wHhQHwA6fM9QNzcaPxAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:VerifyExecutionOptions.Target>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/ENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL?PortalActualURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL&amp;PortalContentURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL&amp;PortalContentProvider=ERP&amp;PortalCRefLabel=Regular%20Entry&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsp%2fSOKLFTSTNSS%2f&amp;PortalURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2f&amp;PortalHostNode=ERP&amp;NoCrumbs=yes&amp;PortalKeyStruct=yes" ContentHash="73WNkgg42kmtMzMKNeJOZw" DesignTimeRectangle="37, 926, 46, 16" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Search'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' aaname='Search' class='PSPUSHBUTTONTBSEARCH PSPRIMARY' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' aaname='Search' class='PSPUSHBUTTONTBSEARCH PSPRIMARY' type='button' check:text='Search' /&gt;" Guid="af10c1bb-e553-4b45-a03a-73ceb3a7a49d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADIAAAAUCAYAAADPym6aAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFRSURBVFhH7VNLDoJADPUw3s9DcB3jNYQzYOLWuGPDhkVl2kI/UwySaJDQ5CUwn857r+3heLrCFrALWRu2KuQOZQs22gYKc+bXeMKtp3Groj2BEkIXmvpuDpwfqAbOau23+FRIlUoREZ6X6HtYJKSD8mIPhMCzEnEVdai8lwaa3rCy7mhraF2XEx5PzsdC6nRPwgtTreXmY0xkUSABXTnbkrhv5orzDmsoxOVnEUJO56Rv82Zguhv2Ht6ZPsRxIpWVGe9Mz5ERx0J0DqzghHHeKL2mc+RCDKRKdGlwJwonxBtihGg36Q3fnoKc9AIhCSwmORa46UGtl0LI5hX5opCRLP9rSOkpwfSjMSm8PylkXmvNrwi3QkbSPUyOB0SQqKoe740VeiMkGl5v3nwh6oCNfIilfTgGkgiXI+1popGQBD9ToxmLhPwvdiFrwy5kXbjCC2/yUY1AWpz5AAAAAElFTkSuQmCC" InformativeScreenshot="8f7fd006d0c48f9dc69691edb458be23.png" Reference="ao86_PT9xkmS2L7lE3WumQ/W57N7q5Bwk-TZ_xRwv2N8A" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Regular Entry' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="185, 926, 90, 16" ElementType="Text" FriendlyName="'Basic Search'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='A' aaname='Basic Search' class='PSHYPERLINK PSHYPERLINKCPHPSRCH' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='A' aaname='Basic Search' class='PSHYPERLINK PSHYPERLINKCPHPSRCH' type='' check:text='Basic Search' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF4AAAAUCAYAAAAEEYpkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH7SURBVFhH7ZbJjQIxEEUnGBIjAoJAZEEIZEAAI3FBcODKFUEQnnZ5qdW9AN2eg7/kQ3sp/3ouG35cUxU18JXUwFdSA19JDXwllcFfL261+dVtd3PPOOVjPW5uvTm5wyN+T9bLHXYz+ntHI3MaAH9x5/gZFBOtnRzo7rYd6PXxFb+Dznt/ANL3gpoHfKdS/9Iq+ggHsr3Gz6W1HHjjuveOE1PKZM9cKfAxnCAI5mJc+5bQhnGfx5Nb7W/ZV14rYq7299CfcjrSce3zraeGVhOYTpuCQsWlPjkOiaSnioHXzxjMNavaSxwS84DSMfgTxfyAuI+wXtygCB37SEzIaTiP6T+uXZMVI4WwYxIFKAy8qv6RMnyiP10oILOoUPQwLGi62IgieLankdvkp8asgE6pP7dkjIERYKmhARjjhLcg+Iu3z2xiL3mAFLxxI4rFZxXQN8DLjfF9xLl2RSCUfABfB+8V9/H7Q3yj4omwYBAMhf1PwVv/IEjipsh6asgyXFT/Hnjw/D3XsiHC+iL4MU/NHOBZv04s3wAwZgAqwh6YKwU+DKhiTahoHgPB6j3zDegBH/Y2Yvo4lmej740fV3EYEJSMd5sH8/xwaIx8Q5ShCCLPFQkoWW+4LpYMMzUGUsTwYwSsCd5L8kmH9zH4plnVwFdSA19JDXwVOfcHM1GIwKK/36wAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+            <uix:NCheckState DisplayName="Check App State 'Summary'" sap:VirtualizedContainerService.HintSize="954,322" sap2010:WorkflowViewState.IdRef="NCheckState_2" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/ENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL" ContentHash="Uvs2_OVQkES3byVUk5gAgw" DesignTimeRectangle="304, 142, 102, 36" DesignTimeScaleFactor="1" FriendlyName="'Payments'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl tag='SPAN' aaname='*ayments' innertext='Payments' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='SPAN' aaname='*ayments' innertext='Payments' type='' class='' check:text='Payments' /&gt;" Guid="77539b50-a848-44ca-b039-7ef79d793564" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGoAAAAoCAYAAAAWsW/wAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJySURBVHhe7ZfdSsMwFID3AHuUPUvfql4IeiFjIG43017oc+RWcDgYQ5mIfYXpLgbHnqTN8rdKXbb2sBP4wCZNSM53cjp7wI1EY1FEmiXq5XUBk4cnuLgeMS1yeXML4+kjzOaL0owh6nk2h9HkHpbvK/jZbGC73TItgfFfvq1geDeVXrBpUWjw4/MrOJFpB/SBXrBpUVfDMazX38EJTDugD/SCTYvC2hh6mWkX9IKNRXUcFkUEFkUEFkUEFkUEFkUEFkWEI4vKIUt60OuFSCDLQ3OoIECIUP9xOImoJMu9sTxLClkpCKefBgLSItnScxDVxmHjcc6iROqUxt08kRbPSQa5MV/eyLJPjqeZVWbl3DyDRK/nlFprrCAVzljxvrDfUXtV+/bmufs314tAa6JkcKvSVwXGCKQqjWWfDII5bq+r1gpIN+Rasvesp4NbSTTm26XaSTJv//Fv3ElEWZmm+eP7ZB1eHVwLdwLj3zg/UO4N9JLHXLMUZQU6sB87MUxR8WntRoVRAdjJDMswg67HrFJTJ6oueUxRTuDrRLlrRi57SDdElRmMh9x3a3bP/prNRKmx2j01FmVgfqsiCuuEKPeGSPZ8R9LMD+K/blRdEA8RVSH3H+/fj+6IMg8lg4JZaQdLvVf0O1KbiSqey6z3xmt+3Nh9zrkC3yh/T4fRCVGIPJiUg+ChAyWqFOiu11gUYpYoiZsodaL8pNHPFU4yHcqRRUUmFMAz4aii+v2+nWUBBoNBcG4ImbURywkliNwoVcpifpypQUQUw6KIwKKIwKKIwKKIwKKIwKKIwKKIwKKIwKKIoEXhH0z30TeKW5cbwC+IicyPASKMQgAAAABJRU5ErkJggg==" InformativeScreenshot="07d47b983ddd85e56c6665353f4192ac.png" Reference="ao86_PT9xkmS2L7lE3WumQ/bOJ008EE60ilwbdFuI1svA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Regular Entry' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="25, 142, 104, 36" ElementType="Text" FriendlyName="'Summary'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl tag='SPAN' aaname='Summary' innertext='Summary' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='SPAN' aaname='Summary' innertext='Summary' type='' class='' check:text='Summary' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGwAAAAoCAYAAAAbrx+3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJoSURBVHhe7Zi9SgNBEIDzMFYW9rEXVMQXsMsLWEiEFGIVRVAxIFaWkYCkEKyEVHIQFRS0EBsrG/+wVizG27vb2b3dvWhylz0GZ+Er3Mzs3e43OwlWgAepwcKIjZSw4/4LzG/dwcRynymZyZVLmNu8he7la2InHijsKHiG6fUb2Om9w+nDF5w9fjMlIhxs996gunYduZEDhc2GNvfPP5zJTHkIJ8KNHChsavUKTu4/nUlMeQgnwo0cKEz0TVcCUz7CjRwsjAAsjBgsjBgsjBgsjBgsjBgsjBj+hHWbUKlUFDNt6LjimIH4EWbKYmkj40XYXj0WVG09xXMXbahG0hahcWHHM9l4FZZ9owKoRQKbsIdzT9CY0aSi5CY0WovxeoJ6EMXjM0Jq3WSNUXJSeQosNi2v1lJxC0vJnL6O7CzJ84rAizCrJVobGEbYX0jWGSUH38VEdQNdNH52aMtBsbrEnPgRFtLRKzxBVe1wwuQBqIMzDztHTjSnI9/DsUaqY5h7cO0pP96ExajNS+JDGEaYisEiwKouICeJy35XJUxvk/p8FDeGdijwLEyiDiPetKvKjbkBh68O7u/CMnOs4lHvagqTfyOapMyYnHgQ5pJhVqmM0TaI33t+hdk30H63bBkqNkY9tyi83DC5QRspUVVxZoyvG2b+QNL4XZix14LbocCLMAFWLiJlSdLVWW0F+Q9/lJxwzjp04/tokDD1zIzPc+JN2L/BUSRFwsIKBm/nGNqhgIUVhdYKx/k/UhZGDBZGDBZGDBZGDBZGDBZGDBZGDBZGDBZGDBZGjJSwjd0DYOiAN4wHhQHwA6fM9QNzcaPxAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" ContentHash="--HNlDyJLUO6vtOoMdEcrg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAh4SURBVFhHpdd7UFNnGgbwWBURCAQVtu0/OzudcXVFVEBATdWKLVvkIuEmWAoUtOttqsICIiqKiEQBoV4xut1O1d11lW4RvFTSQ0ggECABkhAIIF4QpXZTt1Pcdbt59j050QoBq+07804YhuT5fe/58p0D70XLi3kQM69mgJlb02+aU9OHObIeeMqMmCM3YI5Ci3n1Gmr1kE+jsptaskhd/WvrW39Z+TDfSnwY05BXzQNQOPVtsIDZsm7qLnjWdsBTrsWculYCNMOnQQn/phoINdfNS9oudy/TVgitH/Vy5cs8Evoy35t8mIfwrvkGXjWDFH6Hwm/Cs+YGZtewgA54yPSYLW+Dp6IVc+ub4KVUYUEzC7iGpW0VWK67iKCuM+qwXsmLT8SPeZTvywyZLeHMP+HFDGJezT0C3OVWT+EelnAO4FHbRgg1AVTwbqiHb5MMC1qqLYDAjnN413AGK3tPDMX158dYI8YuP+Y/Elo55jPfgQXQ+C2rn0fh7AQsq6fRz2KDLa2jn1lAK02hGfOUjfBVsRO4agWcRVh3GQsAAcyr+/PGRvgzj/MJAFo99fcU/i1N4AEB7lsAnjLu2nvIDJbVs8GzZO34nawVs2pZQAvtBRXtAxmE6itY1n4RgfrPCHAC0TcLQeFIGNhhTh5Mt90X/sx/hRRu9mP+bQHMZ/5F/ZCC2Wt/l177afUsoJNCtU+DR/ZseTMhGmgjfonFmgoEaM8juOsEIm4UIe52LpLuZ2HN16lD1tgfy495bKKm8EdWwHfwkpow84tbmFnRS92DGZe6CGCkcP2o4Wx7yFtoLyixsPkKAf6BgHYWUIaIXjFib+UhaSAVawY3YaMpRWKNtqxewoY/Wf30c31w230NLqnlEGRWwjXrCqZkVVFfwtSMcryaX4U3/t48BoD9KjLwbZRiUUsllmvPIMhQhugbuYi9mY3E/i1IubceGx7Em63xFsAQXX94fP4NBFnXwM+4BudsBi67FBDk1sM1rwFT8pSYmleHabkyTNstxbSdl/FqbhWmV2qGAWbLVZhbJ4e/6hIWt/wNAa2fYEVHCUI7xVjVtw0JdzYh+e5a/OF+PDY9iJRQ+A8xBMD0M/1wSL0Kp+214Oc0wnmvBi772yEQ6+B6UIcp1FMLdXArbIPbgRa47a+HW64UbtkVeOMCNw2P2hY6lBQEUGB+fRUWNV/EMs0pBHcUQ2TMQUxvBuJubMYH/Wvx4b14rB+MHuAtqn6kmXn+a0xOk8IhWwnH3Wrw83RwLjDARdwJQWEXXIuMmHLIiKnU00qoDxngXqyD+4EmuOfJ4LajEr+tUtKpKMdcuRReisvwbziPN5s+xTL1MQTr8hBu2I5o4xa835eCpNuJSOmPxYd3ReB5Vzz8H39nI+yzVXDY3QbHvA445XeCX2CE8wEjXA52Q1DUDdfiHkL0YGpJDyE68XppR/evSg0F7kXqdPd9CuVrBdfhwbCA6wSoxALlZ3hTdQpvNR9BiC4XIkMWAbZide9aJN5MRPKtKA4w4y+DmLS9Gfa72jA5Vw+HvE447qPe3zUcUcghBNl1+M2Wz0us2+dpuefVJk4vr4a3/AJ8FefgX/dnLFaVIaBJjOC2TIRqMxFp2Ij3ehKR0LfaAlhzJxw8t+Iu2GW3YlKOHva5Bkzea7AgHKwIpwKCiDmESzoDxyCx0pppUzM+ufrYW3aWAGexsP4kFisPYplKjCBNBkLb0yDSb0CsIQ7x3VFIuiFCys1Q8FwPGjFxpw52u/SYtNsA+z0cYvJIRKaCwgvgFFaabs2zKZ+/Xm33ln0Kv9ojWKQoxJIGMd5pzECgKg0hmnUIb09GlC4e7xkj8b4xBCl9gWbehGwtJhBg4q4O2OV0EKLDgrB/FrFXD8fQIgovAV90PNWaZ1PejCTfR3aKAIcJcABL6vYgoD6NABsQ0pIIUXsCYvTRNAUR4jt/j0RjQDdv/HYC7NATQm+LYC8Ji9hQBccQAoiOgR95ssCaZ1M+X5UMzK85goW1+6n34S1FKpYrUxHYuA4rGhMQpo6HSBOFWH0IYnXvIt4QIOS9sl2H8dm6URGTrAiHiKNwWnmYDQc/+nS3NW9YeUk/FnpLi+k0FcOfyYWwdieWyrciQLEegfUJHKBJBFFLKCI1QYjTBzKWN76SpTONhbBjJ5HVDIeQQlr9cfCjTrEAMz/qtM3DhXe1uNxbWghf6R4sZHZCyGzF0tqNCJAn4526BAQ1rEKoKhwidQgL4MLZGrdNxxACTxDjR04inQ6n0ENwiihjw6n/RJDTA9a3Dyvf6hy1nzTHvECaToBUAqwjwAd4Wx6HoPpwBDeEm8JUoZutf87VuG3aGELABkE9kb4Z9usq4RhWah0/hXMAdhrl1o+wKaF002Yh85FkCZPMBMhWM2/XrpIEyiPGfjYkxBCLGPcsIptD2KXVw3Hlx6MB4Bx5ctT98PKVqc0nBCw9AjExXUUTKIHT6AA4R5QNOYtODB/rc8p1RWGMa9DBUR5QM7Um3ggEB6EzIPww7YETFP50DzwLAAGojw+5hB8rd1l51OaZTxByKEYQXCwRBBeZCAACjDK5TK2Q2jwaYlLKF3AKP0qhEg4xOgAEAAGoj8Al7DAEoaXUJSAACEBdBAKYCTDGfqBLQY2RiPEZLXCMOEaXgb4J7FfxlwHyrWljVKZWYoOgtlt3jaZwhNuMkSziZwF+fA58bnGTMLOQZxH2SRe4S8GeCZESAlD4iwHMBPiJlY8sbk+YRiIsk6AAuilROBvMhTvTfWIMgIkAP+//Q0tx06BzgoVwiPHpLZicdBF8uj8400ScKZR95YKp6fcEGCLAS676eZXJnphahhCmJ6fmhKw22P2xge6WX8Lxo6/gmsr88Fpa9cPXU86PecseXjze/wGADjhbeB2rcwAAAABJRU5ErkJggg==" InformativeScreenshot="d77f7f8d9c24cd151fc26af5f7807dd2.jpg" Reference="ao86_PT9xkmS2L7lE3WumQ/xI9nd8rHrEWqm4FYG9Q-pQ" Selector="&lt;html app='msedge.exe' title='Regular Entry' /&gt;" Title="Regular Entry" Url="https://soklf-tst.opc.oracleoutsourcing.com/psp/SOKLFTSTNSS/EMPLOYEE/ERP/c/ENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

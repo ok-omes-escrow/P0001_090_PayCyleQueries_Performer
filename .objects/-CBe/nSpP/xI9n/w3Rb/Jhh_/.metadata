@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Look Up Clear",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "Jhh_LUc500yBI6oB994nIw",
+  "Reference": "OjMmxrw78k6OP_iuG1uXrQ/Jhh_LUc500yBI6oB994nIw",
+  "ParentRef": "OjMmxrw78k6OP_iuG1uXrQ/w3Rb470Xh06Iz-2o_a1KcQ",
+  "Created": "2023-12-11T11:25:46.0780128Z",
+  "Updated": "2023-12-11T11:25:46.0780128Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

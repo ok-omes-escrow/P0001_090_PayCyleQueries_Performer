@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Process Scheduler",
+  "Description": "This button shows options for Process Scheduler",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "DFJsu2BgGU2HL7d7d8KVbg",
+  "Reference": "OjMmxrw78k6OP_iuG1uXrQ/DFJsu2BgGU2HL7d7d8KVbg",
+  "ParentRef": "OjMmxrw78k6OP_iuG1uXrQ/rjWUwx8iXEqLjYnPmbHSIw",
+  "Created": "2023-12-11T11:25:44.8916512Z",
+  "Updated": "2023-12-11T11:25:44.8916512Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

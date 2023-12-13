@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Sign In Button",
+  "Description": "This button is used to submit the credentials",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "KPB9o1QnQEeJACKj49eKBQ",
+  "Reference": "OjMmxrw78k6OP_iuG1uXrQ/KPB9o1QnQEeJACKj49eKBQ",
+  "ParentRef": "OjMmxrw78k6OP_iuG1uXrQ/NGr28sHhVkGi766AGCDlzA",
+  "Created": "2023-12-11T11:25:45.1133246Z",
+  "Updated": "2023-12-11T11:25:45.1133246Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

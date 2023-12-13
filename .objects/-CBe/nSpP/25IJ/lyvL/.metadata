@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Process Detail Pop-Up Label",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "lyvLNqhMO0WxqEO8s_B1nQ",
+  "Reference": "OjMmxrw78k6OP_iuG1uXrQ/lyvLNqhMO0WxqEO8s_B1nQ",
+  "ParentRef": "OjMmxrw78k6OP_iuG1uXrQ/25IJ5NWcEECKlFurS8SKlQ",
+  "Created": "2023-12-11T11:25:45.7162528Z",
+  "Updated": "2023-12-11T11:25:45.7162528Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

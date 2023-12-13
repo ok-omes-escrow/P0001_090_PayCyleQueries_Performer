@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Payment Selection",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Id": "R8ST9p458kemMKDW5dkQMQ",
+  "Reference": "OjMmxrw78k6OP_iuG1uXrQ/R8ST9p458kemMKDW5dkQMQ",
+  "ParentRef": "OjMmxrw78k6OP_iuG1uXrQ/SdXzF6BJik2bgUVe2Kvyvg",
+  "Created": "2023-12-11T11:25:45.2351684Z",
+  "Updated": "2023-12-11T11:25:45.2351684Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

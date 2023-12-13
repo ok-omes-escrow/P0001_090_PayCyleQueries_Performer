@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Location Search Button",
+  "Type": "Element",
+  "TaxonomyType": "Icon",
+  "Id": "moSIyMdE6kehMpoA0j1LUA",
+  "Reference": "OjMmxrw78k6OP_iuG1uXrQ/moSIyMdE6kehMpoA0j1LUA",
+  "ParentRef": "OjMmxrw78k6OP_iuG1uXrQ/xI9nd8rHrEWqm4FYG9Q-pQ",
+  "Created": "2023-12-11T11:25:46.0299649Z",
+  "Updated": "2023-12-11T11:25:46.0299649Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
