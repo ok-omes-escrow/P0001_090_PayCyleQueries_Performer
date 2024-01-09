@@ -1,0 +1,17 @@
+﻿{
+  "Name": "User ID Field",
+  "Description": "This field accepts the user ID for the application",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "r-KEc0yk4kWSFQgRsx5i7A",
+  "Reference": "OjMmxrw78k6OP_iuG1uXrQ/r-KEc0yk4kWSFQgRsx5i7A",
+  "ParentRef": "OjMmxrw78k6OP_iuG1uXrQ/NGr28sHhVkGi766AGCDlzA",
+  "Created": "2023-12-11T11:25:45.1326083Z",
+  "Updated": "2023-12-11T11:25:45.1326083Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

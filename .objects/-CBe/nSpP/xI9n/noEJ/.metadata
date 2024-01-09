@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Business Unit Input",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "noEJ4tx0X0-JGD7nAyWGIw",
+  "Reference": "OjMmxrw78k6OP_iuG1uXrQ/noEJ4tx0X0-JGD7nAyWGIw",
+  "ParentRef": "OjMmxrw78k6OP_iuG1uXrQ/xI9nd8rHrEWqm4FYG9Q-pQ",
+  "Created": "2023-12-11T11:25:45.905756Z",
+  "Updated": "2023-12-11T11:25:45.905756Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

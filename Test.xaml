@@ -1,0 +1,282 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Test" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1488,1173" sap2010:WorkflowViewState.IdRef="Test_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:l="clr-namespace:LIB_O365SharepointActivities_00_00;assembly=LIB_O365SharepointActivities_00.00" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>LIB_O365SharepointActivities_00_00</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Models</x:String>
+      <x:String>UiPath.Shared.Services.Graph.Mail.Models</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Filters</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Mail.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Filters</x:String>
+      <x:String>Microsoft.Graph</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>LIB_O365SharepointActivities_00.00</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.Graph</AssemblyReference>
+      <AssemblyReference>Microsoft.Graph.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Test" sap:VirtualizedContainerService.HintSize="547,1068" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_SupplierLocation" />
+      <Variable x:TypeArguments="x:String" Name="strURL" />
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+      <Variable x:TypeArguments="x:String" Name="strSharepointURL" />
+      <Variable x:TypeArguments="x:Boolean" Name="boolFound" />
+      <Variable x:TypeArguments="x:Int32" Name="intCount" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="485,52" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,192" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Folder exists" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="423,101" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+              <ui:MultipleAssign.AssignOperations>
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[strSharepointURL]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">https://officemgmtentserv.sharepoint.com/sites/Automation-UiPath</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                </scg:List>
+              </ui:MultipleAssign.AssignOperations>
+            </ui:MultipleAssign>
+            <l:Files_or_Folders_Exist ApplicationID_Asset_Name="Shared_O365ApplicationID" Application_Secret_Asset_Name="Shared_O365ApplicationSecret" DisplayName="Files or Folders Exist" sap:VirtualizedContainerService.HintSize="423,447" sap2010:WorkflowViewState.IdRef="Files_or_Folders_Exist_1" Result_File_Folder_Found="[boolFound]" Result_Occurrence="[intCount]" Sharepoint_File_Or_Folder_Name_To_Search="Pay Cycle Query" Sharepoint_Subfolder="General/UiPathTest" Sharepoint_URL="[strSharepointURL]" TenantID_Asset_Name="Shared_O365TenantID" />
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="423,85" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Folder exists is : &quot; &amp; boolFound.ToString &amp; &quot;. Count of folders found is &quot; &amp; intCount.ToString]" />
+          </Sequence>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <Sequence DisplayName="Create folder" sap:VirtualizedContainerService.HintSize="485,773" sap2010:WorkflowViewState.IdRef="Sequence_10">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:Boolean" Name="boolSuccess" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="423,101" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+        <ui:MultipleAssign.AssignOperations>
+          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[strSharepointURL]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">https://officemgmtentserv.sharepoint.com/sites/Automation-UiPath</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+          </scg:List>
+        </ui:MultipleAssign.AssignOperations>
+      </ui:MultipleAssign>
+      <l:Create_Folder ApplicationID_Asset_Name="Shared_O365ApplicationID" Application_Secret_Asset_Name="Shared_O365ApplicationSecret" DisplayName="Create Folder" Folder_Created="[boolSuccess]" sap:VirtualizedContainerService.HintSize="423,396" sap2010:WorkflowViewState.IdRef="Create_Folder_1" Sharepoint_New_Folder_Name="Bot Query" Sharepoint_Parent_Folder_Path="General\UiPath Test" Sharepoint_URL="[strSharepointURL]" TenantID_Asset_Name="Shared_O365TenantID" />
+      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="423,85" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Folder creation status is &quot; &amp; boolSuccess.ToString]" />
+    </Sequence>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="485,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="1112,163" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge: Voucher: Regular Entry" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="ea0b0c7b-0917-4742-afae-7b2a09a593e4" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1016,590" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NCheckState DisplayName="Check App State 'Saving Page'" sap:VirtualizedContainerService.HintSize="954,475" sap2010:WorkflowViewState.IdRef="NCheckState_1" Mode="WaitDisappear" ScopeIdentifier="ea0b0c7b-0917-4742-afae-7b2a09a593e4" Timeout="30" Version="V3">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target disappears" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Page saved. Returning to search.&quot;]" />
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not disappear" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Page save is still in progress. Returning to search.&quot;]" />
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/ENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL?PortalActualURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL&amp;PortalContentURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL&amp;PortalContentProvider=ERP&amp;PortalCRefLabel=Regular%20Entry&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsp%2fSOKLFTSTNSS%2f&amp;PortalURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2f&amp;PortalHostNode=ERP&amp;NoCrumbs=yes&amp;PortalKeyStruct=yes" ContentHash="VJuVJccasUeJdGgY7nu0aw" DesignTimeRectangle="12, 120, 866, 53" DesignTimeScaleFactor="1" FriendlyName="'Saving Page'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='SAVED_win0' tag='DIV' visibleinnertext='Saving Page' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='SAVED_win0' tag='DIV' visibleinnertext='Saving Page' type='' class='PTCPSAVETEXTMSGNODE' check:text='Saving Page' /&gt;" Guid="0a818aca-dd4a-42d8-ac93-d31267110cd1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAABzsAAAAUCAYAAAAa5FDTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAP4SURBVHhe7d1NTxRJAIBhftkcuPkfuK0IDCEIG1g2TjYbPHgx3km8c/YgrsYYwTVsou5egHgxUffk/omSnqZ7+qMaZsgMPbM+hyehv6qmub6p6rm//jsLAAAAAAAAALNG7AQAAAAAAABmktgJAAAAAAAAzCSxEwAAAAAAAJhJYicAAEBLHvfmwtzcQGfvMHrf9eyHbn/cjfA4en1csnkibj0MT6PPAAAAwHiInQAAAC2ohs7M+ILnFMTOhOAJAADABImdAAAANy4LhPPh/kl67une/IzGwYaoevIwdCrvCAAAAOMmdgIAANy4wWrIS1dyHmykAbSge5BcOwz3b9VDYh5Me/vnx9UIWTjOQ2QqHTOTjZ1Ixo/PNdAQOwvj5OM3vk/9mea5i/ckJr1yFQAAgGkmdgIAALSguo1tOfqdqwTJgTTuZWFzEEurYbApdsZk91RDYmI+dGrBsaghdlZXdl7xPsPNHbsnUZkbAACAH4bYCQAA0Ip43IsHxUQWFSvxMNv2tnp8SezMA2ljkCz8jnw1ZtNvuyyinmvclrfhfS6bOzsujFmPvgAAAPxIxE4AAIA25ZEvU12lWI2JgxiYrg5Nj+vRryl2FmJidTVoFhP72+A23JOfz1wSO0vjNN0//Nz5Nr0x0bkAAABoy5P3L8PObi8c/ftP7dqLj8fhl9/vhVef3tWujUrsBAAAmAZNqyxrKzUL0fEiEHb29iNBsil2FmPqOGNnNdJWXPU+YicAAMD/xvG307C6vhYWFhbCz/e2w9HXQfD84/TPsNRd7l/bffSg9Nx1iJ0AAAA3LQt7pS1ey/Ev+6Zn45azpWculIJfNULGomQlZMbmyH5rad6i2Lh1V77PMHNH/28AAABMo2cnb8Li8lI/at7d3gyvP3+Inos9OwqxEwAA4MZVImXRRchrXsVYjo5ZREx0D2JzjBA78+Oi+dAZw8rOq99nmLlj96TK7w4AAMA0SFZxLq6kcXN9azP8dOd2vtrz8Mvf0WdGJXYCAAC0IhLuSisWy9eTFZH173Key1dEVmPjdWJn8Vx2PnZP0XCxc7j3GWbu8jgJoRMAAGB6PT97G5ZWV/qRM7HV24l+x/O6xE4AAABSeTgtBMTY9rKT0ObcAAAATMyLj8dhZa0rdgIAADBp9VWTuYl/J7PNuQEAAJiEZBvbpe5yP3Kub22E20uL/b+TbWyPvo4neIqdAAAAFGTb0rYRG9ucGwAAgHF6dvImLC6n3+u8u70ZXn/+ED0Xe3YUYicAAAAAAAAwNsffTsPq+lp0FWc/eK6kwXP30YPSc9chdgIAAAAAAABj9eT9y7Cz24t+n/P52duw/duv4dWnd7VrozkL3wEOzCB+tMzgMAAAAABJRU5ErkJggg==" InformativeScreenshot="e74fd362eb4b8e264e221e9830db761f.png" Reference="ao86_PT9xkmS2L7lE3WumQ/NG0V1UZL4UGSA_s9a-jMuQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Regular Entry' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive" />
+                    </uix:NCheckState.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NCheckState>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" ContentHash="8o7iUVdGfEqMYv3RN7Rtjw" IconBase64="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" InformativeScreenshot="d77f7f8d9c24cd151fc26af5f7807dd2.jpg" Reference="ao86_PT9xkmS2L7lE3WumQ/xI9nd8rHrEWqm4FYG9Q-pQ" Selector="&lt;html app='msedge.exe' title='Regular Entry' /&gt;" Title="Regular Entry" Url="[strURL]" />
+            </uix:NApplicationCard.TargetApp>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NApplicationCard>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+  </Sequence>
+</Activity>

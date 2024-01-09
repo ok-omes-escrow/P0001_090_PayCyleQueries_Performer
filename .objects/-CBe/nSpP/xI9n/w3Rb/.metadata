@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Look Up Location Pop-Up",
+  "Type": "Element",
+  "TaxonomyType": "Messagebox",
+  "Id": "w3Rb470Xh06Iz-2o_a1KcQ",
+  "Reference": "OjMmxrw78k6OP_iuG1uXrQ/w3Rb470Xh06Iz-2o_a1KcQ",
+  "ParentRef": "OjMmxrw78k6OP_iuG1uXrQ/xI9nd8rHrEWqm4FYG9Q-pQ",
+  "Created": "2023-12-11T11:25:46.0472798Z",
+  "Updated": "2023-12-11T11:25:46.0472798Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

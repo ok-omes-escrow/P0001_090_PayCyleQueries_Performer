@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Status",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "dERSZZhfq0WEDrBne3HEBg",
+  "Reference": "OjMmxrw78k6OP_iuG1uXrQ/dERSZZhfq0WEDrBne3HEBg",
+  "ParentRef": "OjMmxrw78k6OP_iuG1uXrQ/SdXzF6BJik2bgUVe2Kvyvg",
+  "Created": "2023-12-11T11:25:45.3470748Z",
+  "Updated": "2023-12-11T11:25:45.3470748Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

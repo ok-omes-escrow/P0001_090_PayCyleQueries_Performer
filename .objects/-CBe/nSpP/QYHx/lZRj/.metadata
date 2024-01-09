@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Pay Cycle Name",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "lZRj24dEckqHgyrYFEbxSA",
+  "Reference": "OjMmxrw78k6OP_iuG1uXrQ/lZRj24dEckqHgyrYFEbxSA",
+  "ParentRef": "OjMmxrw78k6OP_iuG1uXrQ/QYHxe0ZxnkacBkm4UZ34eQ",
+  "Created": "2023-12-11T11:25:45.4847805Z",
+  "Updated": "2023-12-11T11:25:45.4847805Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

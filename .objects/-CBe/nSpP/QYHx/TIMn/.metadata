@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Next Payment Date",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "TIMnh0o36062CBN_FvwkkA",
+  "Reference": "OjMmxrw78k6OP_iuG1uXrQ/TIMnh0o36062CBN_FvwkkA",
+  "ParentRef": "OjMmxrw78k6OP_iuG1uXrQ/QYHxe0ZxnkacBkm4UZ34eQ",
+  "Created": "2023-12-11T11:25:45.4406856Z",
+  "Updated": "2023-12-11T11:25:45.4406856Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

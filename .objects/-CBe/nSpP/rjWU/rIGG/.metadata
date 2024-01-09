@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Navigate Button",
+  "Description": "This button provides navigation options",
+  "Type": "Element",
+  "TaxonomyType": "Icon",
+  "Id": "rIGGyBjDf0qxXz-1vmt5lg",
+  "Reference": "OjMmxrw78k6OP_iuG1uXrQ/rIGGyBjDf0qxXz-1vmt5lg",
+  "ParentRef": "OjMmxrw78k6OP_iuG1uXrQ/rjWUwx8iXEqLjYnPmbHSIw",
+  "Created": "2023-12-11T11:25:44.7734194Z",
+  "Updated": "2023-12-11T11:25:44.7734194Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "TransactionItem&StateMachine_1",
+        "SystemException&StateMachine_1",
+        "BusinessException&StateMachine_1",
+        "TransactionNumber&StateMachine_1",
+        "Config&StateMachine_1",
+        "RetryNumber&StateMachine_1",
+        "TransactionField2&StateMachine_1",
+        "TransactionField1&StateMachine_1",
+        "TransactionID&StateMachine_1",
+        "dt_TransactionData&StateMachine_1",
+        "ConsecutiveSystemExceptions&StateMachine_1",
+        "ShouldStop&Sequence_25"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_OrchestratorQueueName",
+        "in_OrchestratorQueueFolder"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Peoplesoft/NavigateToSearchVoucherPage.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strURL&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Peoplesoft/HoldPayment.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Tests/ProcessTestCase.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Config&Sequence_1",
+        "TransactionItem&Sequence_1",
+        "TransactionNumber&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/Process.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strQueryName&Sequence_1",
+        "strVoucherID&Sequence_1",
+        "strBU&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionItem",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Peoplesoft/CompleteVoucherPaymentPage.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strURL&Sequence_1",
+        "strLocationDescription&Sequence_7",
+        "dt_SupplierLocation&Sequence_5",
+        "strLocationDescription&Sequence_5",
+        "strExtractedPayGroup&Sequence_8"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_strLocation",
+        "in_QueryName",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Peoplesoft/CheckSupplierLocation.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strURL&Sequence_1",
+        "dt_SupplierLocation&Sequence_1",
+        "ExtractDataTable&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_strLocation",
+        "out_strLocationDescription"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Test.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "boolSuccess&Sequence_10",
+        "intCount&Sequence_1",
+        "boolFound&Sequence_1",
+        "strSharepointURL&Sequence_1",
+        "dt_SupplierLocation&Sequence_1",
+        "strURL&Sequence_1",
+        "ExtractDataTable&Sequence_1",
+        "ExtractDataTable&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "arrFiles&Sequence_11",
+        "boolFolderExists&Sequence_13",
+        "secstrPassword&Sequence_10",
+        "strUsername&Sequence_10"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

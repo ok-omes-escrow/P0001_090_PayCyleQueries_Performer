@@ -1,0 +1,15 @@
+﻿{
+  "Name": "Edge: Voucher: Regular Entry",
+  "Type": "Screen",
+  "Id": "xI9nd8rHrEWqm4FYG9Q-pQ",
+  "Reference": "OjMmxrw78k6OP_iuG1uXrQ/xI9nd8rHrEWqm4FYG9Q-pQ",
+  "ParentRef": "OjMmxrw78k6OP_iuG1uXrQ/nSpPxvg0_kuOWgXwF3AoOA",
+  "Created": "2023-12-11T11:25:45.8863407Z",
+  "Updated": "2023-12-11T11:25:45.8863407Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

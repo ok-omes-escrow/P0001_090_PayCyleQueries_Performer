@@ -1,0 +1,398 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="HoldPayment" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_strLocation" Type="InArgument(x:String)" />
+    <x:Property Name="in_QueryName" Type="InArgument(x:String)" />
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1488,2704</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>HoldPayment_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="CompleteVoucherPaymentPage" sap:VirtualizedContainerService.HintSize="1218,2639" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="strURL" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge: Voucher: Regular Entry" sap:VirtualizedContainerService.HintSize="1156,2528" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="7694299b-deec-4217-886b-d38c00a6b64f" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1122,2311" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NCheckState DisplayName="Check App State 'Payments'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="1060,2196" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="7694299b-deec-4217-886b-d38c00a6b64f" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="1016,1979" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Payments'" sap:VirtualizedContainerService.HintSize="954,193" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/ENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL" ContentHash="pqr_D66xR0WewQ-G0nSzRA" DesignTimeRectangle="310, 143, 102, 36" DesignTimeScaleFactor="1" FriendlyName="'Payments'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl tag='SPAN' aaname='*ayments' innertext='Payments' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='SPAN' aaname='*ayments' innertext='Payments' type='' class='' check:text='Payments' /&gt;" Guid="77539b50-a848-44ca-b039-7ef79d793564" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGoAAAAoCAYAAAAWsW/wAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJySURBVHhe7ZfdSsMwFID3AHuUPUvfql4IeiFjIG43017oc+RWcDgYQ5mIfYXpLgbHnqTN8rdKXbb2sBP4wCZNSM53cjp7wI1EY1FEmiXq5XUBk4cnuLgeMS1yeXML4+kjzOaL0owh6nk2h9HkHpbvK/jZbGC73TItgfFfvq1geDeVXrBpUWjw4/MrOJFpB/SBXrBpUVfDMazX38EJTDugD/SCTYvC2hh6mWkX9IKNRXUcFkUEFkUEFkUEFkUEFkUEFkWEI4vKIUt60OuFSCDLQ3OoIECIUP9xOImoJMu9sTxLClkpCKefBgLSItnScxDVxmHjcc6iROqUxt08kRbPSQa5MV/eyLJPjqeZVWbl3DyDRK/nlFprrCAVzljxvrDfUXtV+/bmufs314tAa6JkcKvSVwXGCKQqjWWfDII5bq+r1gpIN+Rasvesp4NbSTTm26XaSTJv//Fv3ElEWZmm+eP7ZB1eHVwLdwLj3zg/UO4N9JLHXLMUZQU6sB87MUxR8WntRoVRAdjJDMswg67HrFJTJ6oueUxRTuDrRLlrRi57SDdElRmMh9x3a3bP/prNRKmx2j01FmVgfqsiCuuEKPeGSPZ8R9LMD+K/blRdEA8RVSH3H+/fj+6IMg8lg4JZaQdLvVf0O1KbiSqey6z3xmt+3Nh9zrkC3yh/T4fRCVGIPJiUg+ChAyWqFOiu11gUYpYoiZsodaL8pNHPFU4yHcqRRUUmFMAz4aii+v2+nWUBBoNBcG4ImbURywkliNwoVcpifpypQUQUw6KIwKKIwKKIwKKIwKKIwKKIwKKIwKKIwKKIoEXhH0z30TeKW5cbwC+IicyPASKMQgAAAABJRU5ErkJggg==" InformativeScreenshot="07d47b983ddd85e56c6665353f4192ac.png" Reference="ao86_PT9xkmS2L7lE3WumQ/bOJ008EE60ilwbdFuI1svA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Regular Entry' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="31, 143, 104, 36" ElementType="Text" FriendlyName="'Summary'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl tag='SPAN' aaname='Summary' innertext='Summary' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='SPAN' aaname='Summary' innertext='Summary' type='' class='' check:text='Summary' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGwAAAAoCAYAAAAbrx+3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJoSURBVHhe7Zi9SgNBEIDzMFYW9rEXVMQXsMsLWEiEFGIVRVAxIFaWkYCkEKyEVHIQFRS0EBsrG/+wVizG27vb2b3dvWhylz0GZ+Er3Mzs3e43OwlWgAepwcKIjZSw4/4LzG/dwcRynymZyZVLmNu8he7la2InHijsKHiG6fUb2Om9w+nDF5w9fjMlIhxs996gunYduZEDhc2GNvfPP5zJTHkIJ8KNHChsavUKTu4/nUlMeQgnwo0cKEz0TVcCUz7CjRwsjAAsjBgsjBgsjBgsjBgsjBgsjBj+hHWbUKlUFDNt6LjimIH4EWbKYmkj40XYXj0WVG09xXMXbahG0hahcWHHM9l4FZZ9owKoRQKbsIdzT9CY0aSi5CY0WovxeoJ6EMXjM0Jq3WSNUXJSeQosNi2v1lJxC0vJnL6O7CzJ84rAizCrJVobGEbYX0jWGSUH38VEdQNdNH52aMtBsbrEnPgRFtLRKzxBVe1wwuQBqIMzDztHTjSnI9/DsUaqY5h7cO0pP96ExajNS+JDGEaYisEiwKouICeJy35XJUxvk/p8FDeGdijwLEyiDiPetKvKjbkBh68O7u/CMnOs4lHvagqTfyOapMyYnHgQ5pJhVqmM0TaI33t+hdk30H63bBkqNkY9tyi83DC5QRspUVVxZoyvG2b+QNL4XZix14LbocCLMAFWLiJlSdLVWW0F+Q9/lJxwzjp04/tokDD1zIzPc+JN2L/BUSRFwsIKBm/nGNqhgIUVhdYKx/k/UhZGDBZGDBZGDBZGDBZGDBZGDBZGDBZGDBZGDBZGjJSwjd0DYOiAN4wHhQHwA6fM9QNzcaPxAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="Checkbox 'Hold Payment'" Mode="Appears" Retry="True">
+                        <uix:VerifyExecutionOptions.Target>
+                          <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/ENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL" ContentHash="Qi_bezGoPEqdJMKrWUmJag" DesignTimeRectangle="1280, 573, 13, 13" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'Hold Payment'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' aaname='Hold Payment' type='checkbox' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' aaname='Hold Payment' type='checkbox' class='' /&gt;" Guid="fa6027e2-a436-4eb3-a194-e50fa79c955e" ImageBase64="" InformativeScreenshot="c58b5a617e9df49373be688053359e1d.png" Reference="ao86_PT9xkmS2L7lE3WumQ/LMzwx79DY0uUExrph0f_qg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Regular Entry' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="1296, 573, 98, 16" ElementType="Text" FriendlyName="'Hold Payment'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='ACE_$ICField163$0' tableRow='2' tag='TABLE' /&gt;&lt;webctrl tag='LABEL' aaname='Hold Payment' class='PSCHECKBOX' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='ACE_$ICField163$0' tag='TABLE' /&gt;&lt;webctrl tag='LABEL' aaname='Hold Payment' class='PSCHECKBOX' type='' check:text='unchecked' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGYAAAAUCAYAAAB/NUioAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHvSURBVGhD7ZaJjYQwDEW3TopJJ1RCHTRBExly2LF/DpjMjhQGvmRpCYmvFzP7Zx8NqQfMoHrADKoHzKASYFY7T5Odpnn/C7TO+/r+zix2i0tH2hbjz5ildaIR02lbrPHvCzYXT/yMrgvG2Y/AWefJYinXAINxKZ/auctos4txdfwzGEc6NCiYhFAGQzGCzWsnGPZjLLnHXJJPKj7tdVL5ifoW4SfknpqHPrAenaeoDSY/QJB+o4nzBTAN44MFp2QRfQ6m5f9NMDAxFCuzai4Ai/2dMM6lUs/Re28u72+A4ULEDeJbEdayZkAznVJDD8DUDOefJCbAR0fA+JzVI5qGZ/AyiBxoasNS6if3AHok42ApXZ+y/AYGUWJuHfeUzzRiOjXAYGwvbnA0aio34ODS8H5dS1xRueafzmThDO0XlxfySM9XBSMaVtKZRqc9KzRnVwNMalgvGFnbl8HwsywOxrTaLOGf9nwGhvJOubBfeQ6nT77rAMMxsKOsM2BKcYL6wHCAgsUIGRj2X7JPwDRyUef0PjW5HWDq9VDT3wPjTcTvBBOE4yyLzcE46WL6/10GqWlwRecN8OKpray/BcZJ16P9lvYX8uKc9F4B5gaqXLARdSMw6VOmp3hM3QOM/FxUf6zH0r0+ZRfSA2ZIWfsC++R1yfZ1YX0AAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:VerifyExecutionOptions.Target>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                  <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="954,601" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+                    <ui:IfElseIf.ConditionBlocks>
+                      <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                        <ui:IfElseIfBlock BlockType="If" Condition="[in_strLocation&lt;&gt;&quot;&quot;]">
+                          <ui:IfElseIfBlock.Then>
+                            <Sequence DisplayName="Hold Payments for IA location" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="x:String" Name="strLocationDescription" />
+                              </Sequence.Variables>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Peoplesoft\CheckSupplierLocation.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="410,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Peoplesoft\CheckSupplierLocation.xaml">
+                                <ui:InvokeWorkflowFile.Arguments>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_strLocation">0362</InArgument>
+                                  <OutArgument x:TypeArguments="x:String" x:Key="out_strLocationDescription">[strLocationDescription]</OutArgument>
+                                </ui:InvokeWorkflowFile.Arguments>
+                              </ui:InvokeWorkflowFile>
+                              <If Condition="[strLocationDescription.ToLower.StartsWith(&quot;ia&quot;) or strLocationDescription.ToLower.StartsWith(&quot;i/a&quot;)]" DisplayName="If Location Description starts with IA" sap:VirtualizedContainerService.HintSize="410,383" sap2010:WorkflowViewState.IdRef="If_1">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <If.Then>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="376,201" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                    <Sequence.Variables>
+                                      <Variable x:TypeArguments="sd:DataTable" Name="dt_SupplierLocation" />
+                                      <Variable x:TypeArguments="x:String" Name="strLocationDescription" />
+                                    </Sequence.Variables>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Peoplesoft\HoldAndSaveVoucher.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Peoplesoft\HoldAndSaveVoucher.xaml">
+                                      <ui:InvokeWorkflowFile.Arguments>
+                                        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                                      </ui:InvokeWorkflowFile.Arguments>
+                                    </ui:InvokeWorkflowFile>
+                                  </Sequence>
+                                </If.Then>
+                                <If.Else>
+                                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_6" />
+                                </If.Else>
+                              </If>
+                            </Sequence>
+                          </ui:IfElseIfBlock.Then>
+                        </ui:IfElseIfBlock>
+                        <ui:IfElseIfBlock BlockType="ElseIf" Condition="[in_QueryName=in_Config(&quot;Query6&quot;).ToString]">
+                          <ui:IfElseIfBlock.Then>
+                            <Sequence DisplayName="Hold Payments for Query 6" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="x:String" Name="strExtractedPayGroup" />
+                              </Sequence.Variables>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NGetText DisplayName="Get Text 'Pay Group Input'" sap:VirtualizedContainerService.HintSize="410,157" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="7694299b-deec-4217-886b-d38c00a6b64f" TextString="[strExtractedPayGroup]" Version="V3">
+                                <uix:NGetText.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/ENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL" ContentHash="dSRAd8d7TUyjGskMgMPB1A" DesignTimeRectangle="659, 564, 265, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Pay Group Input'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' aaname='Pay Group' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' aaname='Pay Group' type='text' class='PSEDITBOX PTCPEDITBOXWITHICON ' /&gt;" Guid="164fe2f7-3664-4668-aeab-7141e034c163" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQ0AAAAiCAYAAABFn4xfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJWSURBVHhe7d0/ixpBGIDxfFDxDxaCiKAIfgLTmUYU4zVBhDRRMSIpFFNEEQ4ipBCvueo4EJOgoqKF5xtmM46abHQ35fr84EWc2W0fdl1kXwkAuEA0ALhyFo374Td5++69vH5TYBiGsXqgunDKRENtfGh8ku8/fuoVALdO9UB14f7rMRwmGqooBAPAn2bzhdWHAxMNdSkCAHZO+0A0AFxFNAC4QjSAGzCZTKRer0u1WrU+1ff/RTQAD1sul5LL5cTn8/01+XxeVquVPtI5ogF41GazkWQyaRuMw6TTadlut/oMZ4gG4FGlUsnEIRKJSLPZlOFwKK1WS6LRqNkrl8v6DGeIBuBB6jeLQxRisZjMZjO985u6bUkkEtZ+IBCQxWKhd64jGoAHtdttE41ut6tXzw0GA3NMv9/Xq9cRDcCDGo2GCcLDw4NePff8/GyOUbcsThENwIPU1cUhCJ1OR6+eG41G5hiuNIAbN51OTRDUE5Tdbqd3jg6PYv1+P79pABApFosmHJlMRh4fH6147Pf7s9uXVColLy8v+qzriAbgUev1WuLxuInDpSkUClZMnCAagIfN53PJZrO2oVC3J6FQyHy/u7vTZ11GNIAb8PT0JLVazfrfSa/Xs37zUMbjsQSDQROOSqVirV9CNIAbp56inIbjX49oD4gGACsc4XDY0aNXogHA4vQfr0QDgCtEA4ArRAOAK0QDgCtEA4ArttHgZUkA7Gw2W/uXJVmvZfzIaxkBHKlgfP4ysH8to6I2VFHUpQjDMIzqwWkwlLNoAMA1RAOACyK/AP8dsk4h9OhpAAAAAElFTkSuQmCC" IsResponsive="True" Reference="ao86_PT9xkmS2L7lE3WumQ/9uwnHAu-UkCVMrapdulOdw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Regular Entry' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="574, 572, 74, 16" ElementType="Text" FriendlyName="'Pay Group Input'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='LABEL' aaname='Pay Group' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='LABEL' aaname='Pay Group' type='' class='PSEDITBOXLABEL' check:text='Pay Group' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE4AAAAUCAYAAAAjvwuMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG2SURBVFhH7ZWLDYQgDIZvTodhEydxDpdwCU6UvisCOaO5+CdNLgh9fLTcJ77q0guuUy+4Tr3gOiXAzeMQh8GzEKclb7pUcxxvi92mSnDJLi5gHp2YZOFh9Fxw45wXNi1xChcnv0wxuIAo9jCMaz8+RxXgUl1hTx4+sELBsGDoHOEERtAv3vjn2mKxbofYYYoTTMj6e/+sR11OCcQRl6PypT0zuzTbNB0d571DySBJB5ILk3R0Ya6cS9v8euvZwG8LOM/4uR+8cQQWEtQgymDs+SRbQI7PAPH9mDt2H/OR19rA0cV7a5XgvBHj789uWIhIpjymSR7Yc3DcH+SiLxdi7+st4MQe5Sep6o2T0iC8jmF7TsY0CSG5exQU9sZRaW3geBy9dhk4GxycynO6e0s+EUYytRHjFcGxeBWjSnvY1OS4FI91NFw+W2vvOHRiTZwT+/hYHajgdzMo9gAcrjuGeZViGHDWTv8ciuBWiW5KmyEhcdDe5rnYGTQ1fkfgNlH3u2dXSTD2KYHvCRKvU46uAvdbEYRqbg8QB1fSdeBwLCrG9EG6ERwfNzsqT9f9HffnesF1KcYv2AjcQ1WshgUAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NGetText.Target>
+                              </uix:NGetText>
+                              <If Condition="[strExtractedPayGroup.Trim&lt;&gt;&quot;&quot;]" DisplayName="If strExtractedPayGroup is blank" sap:VirtualizedContainerService.HintSize="410,666" sap2010:WorkflowViewState.IdRef="If_2">
+                                <If.Then>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="376,306" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Pay Group Input'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Version="V3">
+                                      <uix:NTypeInto.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/ENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL" ContentHash="dSRAd8d7TUyjGskMgMPB1A" DesignTimeRectangle="659, 564, 265, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT PYMNT_VCHR_XREF_P…'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' aaname='Pay Group' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' aaname='Pay Group' type='text' class='PSEDITBOX PTCPEDITBOXWITHICON ' /&gt;" Guid="164fe2f7-3664-4668-aeab-7141e034c163" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQ0AAAAiCAYAAABFn4xfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJWSURBVHhe7d0/ixpBGIDxfFDxDxaCiKAIfgLTmUYU4zVBhDRRMSIpFFNEEQ4ipBCvueo4EJOgoqKF5xtmM46abHQ35fr84EWc2W0fdl1kXwkAuEA0ALhyFo374Td5++69vH5TYBiGsXqgunDKRENtfGh8ku8/fuoVALdO9UB14f7rMRwmGqooBAPAn2bzhdWHAxMNdSkCAHZO+0A0AFxFNAC4QjSAGzCZTKRer0u1WrU+1ff/RTQAD1sul5LL5cTn8/01+XxeVquVPtI5ogF41GazkWQyaRuMw6TTadlut/oMZ4gG4FGlUsnEIRKJSLPZlOFwKK1WS6LRqNkrl8v6DGeIBuBB6jeLQxRisZjMZjO985u6bUkkEtZ+IBCQxWKhd64jGoAHtdttE41ut6tXzw0GA3NMv9/Xq9cRDcCDGo2GCcLDw4NePff8/GyOUbcsThENwIPU1cUhCJ1OR6+eG41G5hiuNIAbN51OTRDUE5Tdbqd3jg6PYv1+P79pABApFosmHJlMRh4fH6147Pf7s9uXVColLy8v+qzriAbgUev1WuLxuInDpSkUClZMnCAagIfN53PJZrO2oVC3J6FQyHy/u7vTZ11GNIAb8PT0JLVazfrfSa/Xs37zUMbjsQSDQROOSqVirV9CNIAbp56inIbjX49oD4gGACsc4XDY0aNXogHA4vQfr0QDgCtEA4ArRAOAK0QDgCtEA4ArttHgZUkA7Gw2W/uXJVmvZfzIaxkBHKlgfP4ysH8to6I2VFHUpQjDMIzqwWkwlLNoAMA1RAOACyK/AP8dsk4h9OhpAAAAAElFTkSuQmCC" IsResponsive="True" Reference="ao86_PT9xkmS2L7lE3WumQ/9uwnHAu-UkCVMrapdulOdw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Regular Entry' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="574, 572, 74, 16" ElementType="Text" FriendlyName="'Pay Group'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='LABEL' aaname='Pay Group' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='LABEL' aaname='Pay Group' type='' class='PSEDITBOXLABEL' check:text='Pay Group' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE4AAAAUCAYAAAAjvwuMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG2SURBVFhH7ZWLDYQgDIZvTodhEydxDpdwCU6UvisCOaO5+CdNLgh9fLTcJ77q0guuUy+4Tr3gOiXAzeMQh8GzEKclb7pUcxxvi92mSnDJLi5gHp2YZOFh9Fxw45wXNi1xChcnv0wxuIAo9jCMaz8+RxXgUl1hTx4+sELBsGDoHOEERtAv3vjn2mKxbofYYYoTTMj6e/+sR11OCcQRl6PypT0zuzTbNB0d571DySBJB5ILk3R0Ya6cS9v8euvZwG8LOM/4uR+8cQQWEtQgymDs+SRbQI7PAPH9mDt2H/OR19rA0cV7a5XgvBHj789uWIhIpjymSR7Yc3DcH+SiLxdi7+st4MQe5Sep6o2T0iC8jmF7TsY0CSG5exQU9sZRaW3geBy9dhk4GxycynO6e0s+EUYytRHjFcGxeBWjSnvY1OS4FI91NFw+W2vvOHRiTZwT+/hYHajgdzMo9gAcrjuGeZViGHDWTv8ciuBWiW5KmyEhcdDe5rnYGTQ1fkfgNlH3u2dXSTD2KYHvCRKvU46uAvdbEYRqbg8QB1fSdeBwLCrG9EG6ERwfNzsqT9f9HffnesF1KcYv2AjcQ1WshgUAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NTypeInto.Target>
+                                    </uix:NTypeInto>
+                                  </Sequence>
+                                </If.Then>
+                                <If.Else>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="376,178" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Throw Exception="[new BusinessRuleException(in_Config(&quot;BE3&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                                  </Sequence>
+                                </If.Else>
+                              </If>
+                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Peoplesoft\HoldAndSaveVoucher.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="410,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Peoplesoft\HoldAndSaveVoucher.xaml">
+                                <ui:InvokeWorkflowFile.Arguments>
+                                  <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                                </ui:InvokeWorkflowFile.Arguments>
+                              </ui:InvokeWorkflowFile>
+                            </Sequence>
+                          </ui:IfElseIfBlock.Then>
+                        </ui:IfElseIfBlock>
+                        <ui:IfElseIfBlock BlockType="Else">
+                          <ui:IfElseIfBlock.Then>
+                            <Sequence DisplayName="Hold Payments for other queries" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Peoplesoft\HoldAndSaveVoucher.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Peoplesoft\HoldAndSaveVoucher.xaml">
+                                <ui:InvokeWorkflowFile.Arguments>
+                                  <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                                </ui:InvokeWorkflowFile.Arguments>
+                              </ui:InvokeWorkflowFile>
+                            </Sequence>
+                          </ui:IfElseIfBlock.Then>
+                        </ui:IfElseIfBlock>
+                      </sc:BindingList>
+                    </ui:IfElseIf.ConditionBlocks>
+                  </ui:IfElseIf>
+                  <uix:NCheckState DisplayName="Check App State 'Saving Page'" sap:VirtualizedContainerService.HintSize="954,475" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="7694299b-deec-4217-886b-d38c00a6b64f" Timeout="30" Version="V3">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Saving in progress...&quot;]" />
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Saving notification did not appear. Returning to search after timeout&quot;]" />
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/ENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL?PortalActualURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL&amp;PortalContentURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL&amp;PortalContentProvider=ERP&amp;PortalCRefLabel=Regular%20Entry&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsp%2fSOKLFTSTNSS%2f&amp;PortalURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2f&amp;PortalHostNode=ERP&amp;NoCrumbs=yes&amp;PortalKeyStruct=yes" ContentHash="VJuVJccasUeJdGgY7nu0aw" DesignTimeRectangle="12, 120, 866, 53" DesignTimeScaleFactor="1" FriendlyName="'Saving Page'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='SAVED_win0' tag='DIV' visibleinnertext='Saving Page' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='SAVED_win0' tag='DIV' visibleinnertext='Saving Page' type='' class='PTCPSAVETEXTMSGNODE' check:text='Saving Page' /&gt;" Guid="0a818aca-dd4a-42d8-ac93-d31267110cd1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAABzsAAAAUCAYAAAAa5FDTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAP4SURBVHhe7d1NTxRJAIBhftkcuPkfuK0IDCEIG1g2TjYbPHgx3km8c/YgrsYYwTVsou5egHgxUffk/omSnqZ7+qMaZsgMPbM+hyehv6qmub6p6rm//jsLAAAAAAAAALNG7AQAAAAAAABmktgJAAAAAAAAzCSxEwAAAAAAAJhJYicAAEBLHvfmwtzcQGfvMHrf9eyHbn/cjfA4en1csnkibj0MT6PPAAAAwHiInQAAAC2ohs7M+ILnFMTOhOAJAADABImdAAAANy4LhPPh/kl67une/IzGwYaoevIwdCrvCAAAAOMmdgIAANy4wWrIS1dyHmykAbSge5BcOwz3b9VDYh5Me/vnx9UIWTjOQ2QqHTOTjZ1Ixo/PNdAQOwvj5OM3vk/9mea5i/ckJr1yFQAAgGkmdgIAALSguo1tOfqdqwTJgTTuZWFzEEurYbApdsZk91RDYmI+dGrBsaghdlZXdl7xPsPNHbsnUZkbAACAH4bYCQAA0Ip43IsHxUQWFSvxMNv2tnp8SezMA2ljkCz8jnw1ZtNvuyyinmvclrfhfS6bOzsujFmPvgAAAPxIxE4AAIA25ZEvU12lWI2JgxiYrg5Nj+vRryl2FmJidTVoFhP72+A23JOfz1wSO0vjNN0//Nz5Nr0x0bkAAABoy5P3L8PObi8c/ftP7dqLj8fhl9/vhVef3tWujUrsBAAAmAZNqyxrKzUL0fEiEHb29iNBsil2FmPqOGNnNdJWXPU+YicAAMD/xvG307C6vhYWFhbCz/e2w9HXQfD84/TPsNRd7l/bffSg9Nx1iJ0AAAA3LQt7pS1ey/Ev+6Zn45azpWculIJfNULGomQlZMbmyH5rad6i2Lh1V77PMHNH/28AAABMo2cnb8Li8lI/at7d3gyvP3+Inos9OwqxEwAA4MZVImXRRchrXsVYjo5ZREx0D2JzjBA78+Oi+dAZw8rOq99nmLlj96TK7w4AAMA0SFZxLq6kcXN9azP8dOd2vtrz8Mvf0WdGJXYCAAC0IhLuSisWy9eTFZH173Key1dEVmPjdWJn8Vx2PnZP0XCxc7j3GWbu8jgJoRMAAGB6PT97G5ZWV/qRM7HV24l+x/O6xE4AAABSeTgtBMTY9rKT0ObcAAAATMyLj8dhZa0rdgIAADBp9VWTuYl/J7PNuQEAAJiEZBvbpe5yP3Kub22E20uL/b+TbWyPvo4neIqdAAAAFGTb0rYRG9ucGwAAgHF6dvImLC6n3+u8u70ZXn/+ED0Xe3YUYicAAAAAAAAwNsffTsPq+lp0FWc/eK6kwXP30YPSc9chdgIAAAAAAABj9eT9y7Cz24t+n/P52duw/duv4dWnd7VrozkL3wEOzCB+tMzgMAAAAABJRU5ErkJggg==" InformativeScreenshot="e74fd362eb4b8e264e221e9830db761f.png" Reference="ao86_PT9xkmS2L7lE3WumQ/NG0V1UZL4UGSA_s9a-jMuQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Regular Entry' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive" />
+                    </uix:NCheckState.Target>
+                  </uix:NCheckState>
+                  <uix:NCheckState DisplayName="Check App State 'Saving Page'" sap:VirtualizedContainerService.HintSize="954,475" sap2010:WorkflowViewState.IdRef="NCheckState_3" Mode="WaitDisappear" ScopeIdentifier="7694299b-deec-4217-886b-d38c00a6b64f" Timeout="30" Version="V3">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target disappears" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Page saved. Returning to search.&quot;]" />
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not disappear" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Page save is still in progress. Returning to search.&quot;]" />
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/ENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL?PortalActualURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL&amp;PortalContentURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL&amp;PortalContentProvider=ERP&amp;PortalCRefLabel=Regular%20Entry&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsp%2fSOKLFTSTNSS%2f&amp;PortalURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2f&amp;PortalHostNode=ERP&amp;NoCrumbs=yes&amp;PortalKeyStruct=yes" ContentHash="VJuVJccasUeJdGgY7nu0aw" DesignTimeRectangle="12, 120, 866, 53" DesignTimeScaleFactor="1" FriendlyName="'Saving Page'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='SAVED_win0' tag='DIV' visibleinnertext='Saving Page' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='SAVED_win0' tag='DIV' visibleinnertext='Saving Page' type='' class='PTCPSAVETEXTMSGNODE' check:text='Saving Page' /&gt;" Guid="0a818aca-dd4a-42d8-ac93-d31267110cd1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAABzsAAAAUCAYAAAAa5FDTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAP4SURBVHhe7d1NTxRJAIBhftkcuPkfuK0IDCEIG1g2TjYbPHgx3km8c/YgrsYYwTVsou5egHgxUffk/omSnqZ7+qMaZsgMPbM+hyehv6qmub6p6rm//jsLAAAAAAAAALNG7AQAAAAAAABmktgJAAAAAAAAzCSxEwAAAAAAAJhJYicAAEBLHvfmwtzcQGfvMHrf9eyHbn/cjfA4en1csnkibj0MT6PPAAAAwHiInQAAAC2ohs7M+ILnFMTOhOAJAADABImdAAAANy4LhPPh/kl67une/IzGwYaoevIwdCrvCAAAAOMmdgIAANy4wWrIS1dyHmykAbSge5BcOwz3b9VDYh5Me/vnx9UIWTjOQ2QqHTOTjZ1Ixo/PNdAQOwvj5OM3vk/9mea5i/ckJr1yFQAAgGkmdgIAALSguo1tOfqdqwTJgTTuZWFzEEurYbApdsZk91RDYmI+dGrBsaghdlZXdl7xPsPNHbsnUZkbAACAH4bYCQAA0Ip43IsHxUQWFSvxMNv2tnp8SezMA2ljkCz8jnw1ZtNvuyyinmvclrfhfS6bOzsujFmPvgAAAPxIxE4AAIA25ZEvU12lWI2JgxiYrg5Nj+vRryl2FmJidTVoFhP72+A23JOfz1wSO0vjNN0//Nz5Nr0x0bkAAABoy5P3L8PObi8c/ftP7dqLj8fhl9/vhVef3tWujUrsBAAAmAZNqyxrKzUL0fEiEHb29iNBsil2FmPqOGNnNdJWXPU+YicAAMD/xvG307C6vhYWFhbCz/e2w9HXQfD84/TPsNRd7l/bffSg9Nx1iJ0AAAA3LQt7pS1ey/Ev+6Zn45azpWculIJfNULGomQlZMbmyH5rad6i2Lh1V77PMHNH/28AAABMo2cnb8Li8lI/at7d3gyvP3+Inos9OwqxEwAA4MZVImXRRchrXsVYjo5ZREx0D2JzjBA78+Oi+dAZw8rOq99nmLlj96TK7w4AAMA0SFZxLq6kcXN9azP8dOd2vtrz8Mvf0WdGJXYCAAC0IhLuSisWy9eTFZH173Key1dEVmPjdWJn8Vx2PnZP0XCxc7j3GWbu8jgJoRMAAGB6PT97G5ZWV/qRM7HV24l+x/O6xE4AAABSeTgtBMTY9rKT0ObcAAAATMyLj8dhZa0rdgIAADBp9VWTuYl/J7PNuQEAAJiEZBvbpe5yP3Kub22E20uL/b+TbWyPvo4neIqdAAAAFGTb0rYRG9ucGwAAgHF6dvImLC6n3+u8u70ZXn/+ED0Xe3YUYicAAAAAAAAwNsffTsPq+lp0FWc/eK6kwXP30YPSc9chdgIAAAAAAABj9eT9y7Cz24t+n/P52duw/duv4dWnd7VrozkL3wEOzCB+tMzgMAAAAABJRU5ErkJggg==" InformativeScreenshot="e74fd362eb4b8e264e221e9830db761f.png" Reference="ao86_PT9xkmS2L7lE3WumQ/NG0V1UZL4UGSA_s9a-jMuQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Regular Entry' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive" />
+                    </uix:NCheckState.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NCheckState>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/ENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL" ContentHash="pqr_D66xR0WewQ-G0nSzRA" DesignTimeRectangle="310, 143, 102, 36" DesignTimeScaleFactor="1" FriendlyName="'Payments'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl tag='SPAN' aaname='*ayments' innertext='Payments' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='SPAN' aaname='*ayments' innertext='Payments' type='' class='' check:text='Payments' /&gt;" Guid="77539b50-a848-44ca-b039-7ef79d793564" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGoAAAAoCAYAAAAWsW/wAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJySURBVHhe7ZfdSsMwFID3AHuUPUvfql4IeiFjIG43017oc+RWcDgYQ5mIfYXpLgbHnqTN8rdKXbb2sBP4wCZNSM53cjp7wI1EY1FEmiXq5XUBk4cnuLgeMS1yeXML4+kjzOaL0owh6nk2h9HkHpbvK/jZbGC73TItgfFfvq1geDeVXrBpUWjw4/MrOJFpB/SBXrBpUVfDMazX38EJTDugD/SCTYvC2hh6mWkX9IKNRXUcFkUEFkUEFkUEFkUEFkUEFkWEI4vKIUt60OuFSCDLQ3OoIECIUP9xOImoJMu9sTxLClkpCKefBgLSItnScxDVxmHjcc6iROqUxt08kRbPSQa5MV/eyLJPjqeZVWbl3DyDRK/nlFprrCAVzljxvrDfUXtV+/bmufs314tAa6JkcKvSVwXGCKQqjWWfDII5bq+r1gpIN+Rasvesp4NbSTTm26XaSTJv//Fv3ElEWZmm+eP7ZB1eHVwLdwLj3zg/UO4N9JLHXLMUZQU6sB87MUxR8WntRoVRAdjJDMswg67HrFJTJ6oueUxRTuDrRLlrRi57SDdElRmMh9x3a3bP/prNRKmx2j01FmVgfqsiCuuEKPeGSPZ8R9LMD+K/blRdEA8RVSH3H+/fj+6IMg8lg4JZaQdLvVf0O1KbiSqey6z3xmt+3Nh9zrkC3yh/T4fRCVGIPJiUg+ChAyWqFOiu11gUYpYoiZsodaL8pNHPFU4yHcqRRUUmFMAz4aii+v2+nWUBBoNBcG4ImbURywkliNwoVcpifpypQUQUw6KIwKKIwKKIwKKIwKKIwKKIwKKIwKKIwKKIoEXhH0z30TeKW5cbwC+IicyPASKMQgAAAABJRU5ErkJggg==" InformativeScreenshot="07d47b983ddd85e56c6665353f4192ac.png" Reference="ao86_PT9xkmS2L7lE3WumQ/bOJ008EE60ilwbdFuI1svA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Regular Entry' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="31, 143, 104, 36" ElementType="Text" FriendlyName="'Payments'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl tag='SPAN' aaname='Summary' innertext='Summary' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='SPAN' aaname='Summary' innertext='Summary' type='' class='' check:text='Summary' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGwAAAAoCAYAAAAbrx+3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJoSURBVHhe7Zi9SgNBEIDzMFYW9rEXVMQXsMsLWEiEFGIVRVAxIFaWkYCkEKyEVHIQFRS0EBsrG/+wVizG27vb2b3dvWhylz0GZ+Er3Mzs3e43OwlWgAepwcKIjZSw4/4LzG/dwcRynymZyZVLmNu8he7la2InHijsKHiG6fUb2Om9w+nDF5w9fjMlIhxs996gunYduZEDhc2GNvfPP5zJTHkIJ8KNHChsavUKTu4/nUlMeQgnwo0cKEz0TVcCUz7CjRwsjAAsjBgsjBgsjBgsjBgsjBgsjBj+hHWbUKlUFDNt6LjimIH4EWbKYmkj40XYXj0WVG09xXMXbahG0hahcWHHM9l4FZZ9owKoRQKbsIdzT9CY0aSi5CY0WovxeoJ6EMXjM0Jq3WSNUXJSeQosNi2v1lJxC0vJnL6O7CzJ84rAizCrJVobGEbYX0jWGSUH38VEdQNdNH52aMtBsbrEnPgRFtLRKzxBVe1wwuQBqIMzDztHTjSnI9/DsUaqY5h7cO0pP96ExajNS+JDGEaYisEiwKouICeJy35XJUxvk/p8FDeGdijwLEyiDiPetKvKjbkBh68O7u/CMnOs4lHvagqTfyOapMyYnHgQ5pJhVqmM0TaI33t+hdk30H63bBkqNkY9tyi83DC5QRspUVVxZoyvG2b+QNL4XZix14LbocCLMAFWLiJlSdLVWW0F+Q9/lJxwzjp04/tokDD1zIzPc+JN2L/BUSRFwsIKBm/nGNqhgIUVhdYKx/k/UhZGDBZGDBZGDBZGDBZGDBZGDBZGDBZGDBZGDBZGjJSwjd0DYOiAN4wHhQHwA6fM9QNzcaPxAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" ContentHash="8o7iUVdGfEqMYv3RN7Rtjw" IconBase64="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" InformativeScreenshot="d77f7f8d9c24cd151fc26af5f7807dd2.jpg" Reference="ao86_PT9xkmS2L7lE3WumQ/xI9nd8rHrEWqm4FYG9Q-pQ" Selector="&lt;html app='msedge.exe' title='Regular Entry' /&gt;" Title="Regular Entry" Url="[strURL]" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

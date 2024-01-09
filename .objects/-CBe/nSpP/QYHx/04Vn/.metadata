@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Pay Through Date",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "04VnK0X4hEOyDi57UN68uQ",
+  "Reference": "OjMmxrw78k6OP_iuG1uXrQ/04VnK0X4hEOyDi57UN68uQ",
+  "ParentRef": "OjMmxrw78k6OP_iuG1uXrQ/QYHxe0ZxnkacBkm4UZ34eQ",
+  "Created": "2023-12-11T11:25:45.5117019Z",
+  "Updated": "2023-12-11T11:25:45.5117019Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
