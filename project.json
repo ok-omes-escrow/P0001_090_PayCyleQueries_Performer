@@ -3,8 +3,8 @@
   "description": "This automation fetches vouchers from the queue and puts them on hold in Peoplesoft",
   "main": "Main.xaml",
   "dependencies": {
-    "LIB_O365SharepointActivities_00.00": "[1.0.2]",
-    "LIB_PeopleSoft_9.2": "[1.0.1-alpha.24]",
+    "LIB_GraphAPI_1.0": "[1.0.1-alpha.2]",
+    "LIB_PeopleSoft_9.2": "[1.0.1-alpha.35]",
     "UiPath.Excel.Activities": "[2.20.2]",
     "UiPath.System.Activities": "[23.4.5]",
     "UiPath.Testing.Activities": "[23.4.1]",
@@ -14,7 +14,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "23.4.5.0",
-  "projectVersion": "1.0.0",
+  "projectVersion": "1.0.1-alpha",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,

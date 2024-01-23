@@ -12,6 +12,7 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "strURL&Sequence_28",
         "TransactionItem&StateMachine_1",
         "SystemException&StateMachine_1",
         "BusinessException&StateMachine_1",
@@ -66,6 +67,7 @@
       "Path": "Framework/Process.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "strLocation&Sequence_1",
         "strQueryName&Sequence_1",
         "strVoucherID&Sequence_1",
         "strBU&Sequence_1"
@@ -114,14 +116,13 @@
       "Path": "Test.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "boolSuccess&Sequence_10",
+        "checked&Sequence_1",
         "intCount&Sequence_1",
         "boolFound&Sequence_1",
         "strSharepointURL&Sequence_1",
         "dt_SupplierLocation&Sequence_1",
         "strURL&Sequence_1",
-        "ExtractDataTable&Sequence_1",
-        "ExtractDataTable&Sequence_2"
+        "ExtractDataTable&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
@@ -139,6 +140,49 @@
       "ArgumentsSectionElementsOrder": [
         "in_Config"
       ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/GetTransactionData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionNumber",
+        "in_Config",
+        "out_TransactionItem",
+        "out_TransactionField1",
+        "out_TransactionField2",
+        "out_TransactionID",
+        "io_dt_TransactionData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Peoplesoft/HoldAndSaveVoucher.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "boolChecked&Sequence_2",
+        "strURL&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/CloseAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/KillAllProcesses.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }
