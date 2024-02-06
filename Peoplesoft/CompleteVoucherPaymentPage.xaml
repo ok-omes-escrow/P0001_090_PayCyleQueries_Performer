@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="HoldPayment" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="HoldPayment" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_strLocation" Type="InArgument(x:String)" />
     <x:Property Name="in_QueryName" Type="InArgument(x:String)" />
@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1668,2704</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1768,2914</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>HoldPayment_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -54,6 +54,7 @@
       <x:String>UiPath.Platform.Triggers</x:String>
       <x:String>UiPath.UIAutomationNext.Activities.Triggers</x:String>
       <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -118,7 +119,7 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CompleteVoucherPaymentPage" sap:VirtualizedContainerService.HintSize="1678,2639" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CompleteVoucherPaymentPage" sap:VirtualizedContainerService.HintSize="1778,2849" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strURL" />
     </Sequence.Variables>
@@ -127,27 +128,28 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge: Voucher: Regular Entry" sap:VirtualizedContainerService.HintSize="1616,2528" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="7694299b-deec-4217-886b-d38c00a6b64f" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge: Voucher: Regular Entry" sap:VirtualizedContainerService.HintSize="1716,2738" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="7694299b-deec-4217-886b-d38c00a6b64f" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1582,2311" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1682,2521" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check App State 'Payments'" sap:VirtualizedContainerService.HintSize="1520,2196" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="7694299b-deec-4217-886b-d38c00a6b64f" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'Payments'" sap:VirtualizedContainerService.HintSize="1620,2406" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="7694299b-deec-4217-886b-d38c00a6b64f" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Payment Tab appears" sap:VirtualizedContainerService.HintSize="1016,1979" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Payment Tab appears" sap:VirtualizedContainerService.HintSize="1116,2149" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Payments'" sap:VirtualizedContainerService.HintSize="954,193" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Version="V3">
+                  <ui:LogMessage DisplayName="Log Message -Click Payments" sap:VirtualizedContainerService.HintSize="1054,143" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Clicking Payments tab&quot;]" />
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Payments'" sap:VirtualizedContainerService.HintSize="1054,193" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/ENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL" ContentHash="pqr_D66xR0WewQ-G0nSzRA" DesignTimeRectangle="310, 143, 102, 36" DesignTimeScaleFactor="1" FriendlyName="'Payments'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl tag='SPAN' aaname='*ayments' innertext='Payments' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='SPAN' aaname='*ayments' innertext='Payments' type='' class='' check:text='Payments' /&gt;" Guid="77539b50-a848-44ca-b039-7ef79d793564" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGoAAAAoCAYAAAAWsW/wAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJySURBVHhe7ZfdSsMwFID3AHuUPUvfql4IeiFjIG43017oc+RWcDgYQ5mIfYXpLgbHnqTN8rdKXbb2sBP4wCZNSM53cjp7wI1EY1FEmiXq5XUBk4cnuLgeMS1yeXML4+kjzOaL0owh6nk2h9HkHpbvK/jZbGC73TItgfFfvq1geDeVXrBpUWjw4/MrOJFpB/SBXrBpUVfDMazX38EJTDugD/SCTYvC2hh6mWkX9IKNRXUcFkUEFkUEFkUEFkUEFkUEFkWEI4vKIUt60OuFSCDLQ3OoIECIUP9xOImoJMu9sTxLClkpCKefBgLSItnScxDVxmHjcc6iROqUxt08kRbPSQa5MV/eyLJPjqeZVWbl3DyDRK/nlFprrCAVzljxvrDfUXtV+/bmufs314tAa6JkcKvSVwXGCKQqjWWfDII5bq+r1gpIN+Rasvesp4NbSTTm26XaSTJv//Fv3ElEWZmm+eP7ZB1eHVwLdwLj3zg/UO4N9JLHXLMUZQU6sB87MUxR8WntRoVRAdjJDMswg67HrFJTJ6oueUxRTuDrRLlrRi57SDdElRmMh9x3a3bP/prNRKmx2j01FmVgfqsiCuuEKPeGSPZ8R9LMD+K/blRdEA8RVSH3H+/fj+6IMg8lg4JZaQdLvVf0O1KbiSqey6z3xmt+3Nh9zrkC3yh/T4fRCVGIPJiUg+ChAyWqFOiu11gUYpYoiZsodaL8pNHPFU4yHcqRRUUmFMAz4aii+v2+nWUBBoNBcG4ImbURywkliNwoVcpifpypQUQUw6KIwKKIwKKIwKKIwKKIwKKIwKKIwKKIwKKIoEXhH0z30TeKW5cbwC+IicyPASKMQgAAAABJRU5ErkJggg==" InformativeScreenshot="07d47b983ddd85e56c6665353f4192ac.png" Reference="ao86_PT9xkmS2L7lE3WumQ/bOJ008EE60ilwbdFuI1svA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Regular Entry' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -174,7 +176,7 @@
                       </uix:VerifyExecutionOptions>
                     </uix:NClick.VerifyOptions>
                   </uix:NClick>
-                  <ui:IfElseIf DisplayName="Else If - Hold according to Query name" sap:VirtualizedContainerService.HintSize="954,601" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+                  <ui:IfElseIf DisplayName="Else If - Hold according to Query name" sap:VirtualizedContainerService.HintSize="1054,601" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
                     <ui:IfElseIf.ConditionBlocks>
                       <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                         <ui:IfElseIfBlock BlockType="If" Condition="[in_strLocation&lt;&gt;&quot;&quot;]">
@@ -189,14 +191,59 @@
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Peoplesoft\CheckSupplierLocation.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="410,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Peoplesoft\CheckSupplierLocation.xaml">
-                                <ui:InvokeWorkflowFile.Arguments>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_strLocation">[in_strLocation]</InArgument>
-                                  <OutArgument x:TypeArguments="x:String" x:Key="out_strLocationDescription">[strLocationDescription]</OutArgument>
-                                  <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
-                                </ui:InvokeWorkflowFile.Arguments>
-                              </ui:InvokeWorkflowFile>
-                              <If Condition="[strLocationDescription.ToLower.StartsWith(&quot;ia&quot;) or strLocationDescription.ToLower.StartsWith(&quot;i/a&quot;)]" DisplayName="If Location Description starts with IA" sap:VirtualizedContainerService.HintSize="410,566" sap2010:WorkflowViewState.IdRef="If_1">
+                              <ui:LogMessage DisplayName="Log Message -Hold payment for Query 5" sap:VirtualizedContainerService.HintSize="514,143" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Holding payments for Query &quot; &amp; in_QueryName]" />
+                              <TryCatch DisplayName="Try Catch - Check Supplier" sap:VirtualizedContainerService.HintSize="514,341" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                                <TryCatch.Try>
+                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Peoplesoft\CheckSupplierLocation.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Peoplesoft\CheckSupplierLocation.xaml">
+                                    <ui:InvokeWorkflowFile.Arguments>
+                                      <InArgument x:TypeArguments="x:String" x:Key="in_strLocation">[in_strLocation]</InArgument>
+                                      <OutArgument x:TypeArguments="x:String" x:Key="out_strLocationDescription">[strLocationDescription]</OutArgument>
+                                      <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+                                    </ui:InvokeWorkflowFile.Arguments>
+                                  </ui:InvokeWorkflowFile>
+                                </TryCatch.Try>
+                                <TryCatch.Catches>
+                                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ActivityAction x:TypeArguments="s:Exception">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                      </ActivityAction.Argument>
+                                      <If Condition="[exception.Message.Contains(&quot;SE&quot;) Or exception.Message.Contains(&quot;BE&quot;)]" DisplayName="If Check Supplier Exception Message contains SE or BE" sap:VirtualizedContainerService.HintSize="410,473" sap2010:WorkflowViewState.IdRef="If_3">
+                                        <If.Then>
+                                          <Sequence sap:VirtualizedContainerService.HintSize="376,113" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <Rethrow DisplayName="Rethrow Clear Downloads Exceptions" sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="Rethrow_1" />
+                                          </Sequence>
+                                        </If.Then>
+                                        <If.Else>
+                                          <Sequence sap:VirtualizedContainerService.HintSize="376,178" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                            <Sequence.Variables>
+                                              <Variable x:TypeArguments="sd:DataRow" Name="drExceptionRow" />
+                                            </Sequence.Variables>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <Throw DisplayName="Throw SE - Check Supplier" Exception="[New System.Exception(DirectCast(in_Config(&quot;SE&quot;),system.Data.DataRow)(&quot;Exception Details&quot;).ToString.Replace(&quot;{Exception Details}&quot;,&quot;Error occurred while checking supplier location for IA. Technical Details: &quot; &amp; exception.Message.ToString))]" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="Throw_3" />
+                                          </Sequence>
+                                        </If.Else>
+                                      </If>
+                                    </ActivityAction>
+                                  </Catch>
+                                </TryCatch.Catches>
+                              </TryCatch>
+                              <If Condition="[strLocationDescription.ToLower.StartsWith(&quot;ia&quot;) or strLocationDescription.ToLower.StartsWith(&quot;i/a&quot;)]" DisplayName="If Location Description starts with IA" sap:VirtualizedContainerService.HintSize="514,794" sap2010:WorkflowViewState.IdRef="If_1">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -204,7 +251,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <If.Then>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="376,384" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                  <Sequence sap:VirtualizedContainerService.HintSize="480,612" sap2010:WorkflowViewState.IdRef="Sequence_5">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="sd:DataTable" Name="dt_SupplierLocation" />
                                       <Variable x:TypeArguments="x:String" Name="strLocationDescription" />
@@ -214,14 +261,56 @@
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:LogMessage DisplayName="Log Message Locations starts with IA" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;Location Description &quot; &amp; strLocationDescription &amp; &quot; starts with IA or I/A&quot;]" />
-                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Peoplesoft\HoldAndSaveVoucher.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Peoplesoft\HoldAndSaveVoucher.xaml">
-                                      <ui:InvokeWorkflowFile.Arguments>
-                                        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
-                                          <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
-                                        </InArgument>
-                                      </ui:InvokeWorkflowFile.Arguments>
-                                    </ui:InvokeWorkflowFile>
+                                    <ui:LogMessage DisplayName="Log Message Locations starts with IA" sap:VirtualizedContainerService.HintSize="438,143" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;Location Description &quot; &amp; strLocationDescription &amp; &quot; starts with IA or I/A&quot;]" />
+                                    <TryCatch DisplayName="Try Catch - Hold Voucher" sap:VirtualizedContainerService.HintSize="438,341" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                                      <TryCatch.Try>
+                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Peoplesoft\HoldAndSaveVoucher.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Peoplesoft\HoldAndSaveVoucher.xaml">
+                                          <ui:InvokeWorkflowFile.Arguments>
+                                            <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+                                          </ui:InvokeWorkflowFile.Arguments>
+                                        </ui:InvokeWorkflowFile>
+                                      </TryCatch.Try>
+                                      <TryCatch.Catches>
+                                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ActivityAction x:TypeArguments="s:Exception">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                            </ActivityAction.Argument>
+                                            <If Condition="[exception.Message.Contains(&quot;SE&quot;) Or exception.Message.Contains(&quot;BE&quot;)]" DisplayName="If Hold Voucher Exception Message contains SE or BE" sap:VirtualizedContainerService.HintSize="410,473" sap2010:WorkflowViewState.IdRef="If_4">
+                                              <If.Then>
+                                                <Sequence sap:VirtualizedContainerService.HintSize="376,113" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <Rethrow DisplayName="Rethrow Clear Downloads Exceptions" sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="Rethrow_2" />
+                                                </Sequence>
+                                              </If.Then>
+                                              <If.Else>
+                                                <Sequence sap:VirtualizedContainerService.HintSize="376,178" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                                  <Sequence.Variables>
+                                                    <Variable x:TypeArguments="sd:DataRow" Name="drExceptionRow" />
+                                                  </Sequence.Variables>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <Throw DisplayName="Throw SE - Hold Voucher" Exception="[New System.Exception(DirectCast(in_Config(&quot;SE&quot;),system.Data.DataRow)(&quot;Exception Details&quot;).ToString.Replace(&quot;{Exception Details}&quot;,&quot;Error occurred while putting voucher on hold. Technical Details: &quot; &amp; exception.Message.ToString))]" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="Throw_4" />
+                                                </Sequence>
+                                              </If.Else>
+                                            </If>
+                                          </ActivityAction>
+                                        </Catch>
+                                      </TryCatch.Catches>
+                                    </TryCatch>
                                   </Sequence>
                                 </If.Then>
                                 <If.Else>
@@ -251,7 +340,8 @@
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <uix:NGetText DisplayName="Get Text 'Pay Group Input'" sap:VirtualizedContainerService.HintSize="410,157" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="7694299b-deec-4217-886b-d38c00a6b64f" TextString="[strExtractedPayGroup]" Version="V3">
+                              <ui:LogMessage DisplayName="Log Message -Hold payment for Query 6" sap:VirtualizedContainerService.HintSize="438,143" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Holding payments for Query &quot; &amp; in_QueryName]" />
+                              <uix:NGetText DisplayName="Get Text 'Pay Group Input'" sap:VirtualizedContainerService.HintSize="438,157" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="7694299b-deec-4217-886b-d38c00a6b64f" TextString="[strExtractedPayGroup]" Version="V3">
                                 <uix:NGetText.Target>
                                   <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/ENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL" ContentHash="dSRAd8d7TUyjGskMgMPB1A" DesignTimeRectangle="659, 564, 265, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Pay Group Input'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' aaname='Pay Group' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' aaname='Pay Group' type='text' class='PSEDITBOX PTCPEDITBOXWITHICON ' /&gt;" Guid="164fe2f7-3664-4668-aeab-7141e034c163" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQ0AAAAiCAYAAABFn4xfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJWSURBVHhe7d0/ixpBGIDxfFDxDxaCiKAIfgLTmUYU4zVBhDRRMSIpFFNEEQ4ipBCvueo4EJOgoqKF5xtmM46abHQ35fr84EWc2W0fdl1kXwkAuEA0ALhyFo374Td5++69vH5TYBiGsXqgunDKRENtfGh8ku8/fuoVALdO9UB14f7rMRwmGqooBAPAn2bzhdWHAxMNdSkCAHZO+0A0AFxFNAC4QjSAGzCZTKRer0u1WrU+1ff/RTQAD1sul5LL5cTn8/01+XxeVquVPtI5ogF41GazkWQyaRuMw6TTadlut/oMZ4gG4FGlUsnEIRKJSLPZlOFwKK1WS6LRqNkrl8v6DGeIBuBB6jeLQxRisZjMZjO985u6bUkkEtZ+IBCQxWKhd64jGoAHtdttE41ut6tXzw0GA3NMv9/Xq9cRDcCDGo2GCcLDw4NePff8/GyOUbcsThENwIPU1cUhCJ1OR6+eG41G5hiuNIAbN51OTRDUE5Tdbqd3jg6PYv1+P79pABApFosmHJlMRh4fH6147Pf7s9uXVColLy8v+qzriAbgUev1WuLxuInDpSkUClZMnCAagIfN53PJZrO2oVC3J6FQyHy/u7vTZ11GNIAb8PT0JLVazfrfSa/Xs37zUMbjsQSDQROOSqVirV9CNIAbp56inIbjX49oD4gGACsc4XDY0aNXogHA4vQfr0QDgCtEA4ArRAOAK0QDgCtEA4ArttHgZUkA7Gw2W/uXJVmvZfzIaxkBHKlgfP4ysH8to6I2VFHUpQjDMIzqwWkwlLNoAMA1RAOACyK/AP8dsk4h9OhpAAAAAElFTkSuQmCC" IsResponsive="True" Reference="ao86_PT9xkmS2L7lE3WumQ/9uwnHAu-UkCVMrapdulOdw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Regular Entry' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                                     <uix:TargetAnchorable.Anchors>
@@ -262,14 +352,16 @@
                                   </uix:TargetAnchorable>
                                 </uix:NGetText.Target>
                               </uix:NGetText>
-                              <If Condition="[strExtractedPayGroup.Trim&lt;&gt;&quot;&quot;]" DisplayName="If strExtractedPayGroup is blank" sap:VirtualizedContainerService.HintSize="410,488" sap2010:WorkflowViewState.IdRef="If_2">
+                              <ui:LogMessage DisplayName="Log Message -Paygroup value" sap:VirtualizedContainerService.HintSize="438,143" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Paygroup value is &quot; &amp; strExtractedPayGroup]" />
+                              <If Condition="[strExtractedPayGroup.Trim&lt;&gt;&quot;&quot;]" DisplayName="If strExtractedPayGroup is blank" sap:VirtualizedContainerService.HintSize="438,671" sap2010:WorkflowViewState.IdRef="If_2">
                                 <If.Then>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="376,306" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                  <Sequence sap:VirtualizedContainerService.HintSize="376,489" sap2010:WorkflowViewState.IdRef="Sequence_9">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
+                                    <ui:LogMessage DisplayName="Log Message -Hold payment for Query 1" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Clearing Paygroup value in field&quot;]" />
                                     <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Pay Group Input'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Version="V3">
                                       <uix:NTypeInto.Target>
                                         <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/ENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL" ContentHash="dSRAd8d7TUyjGskMgMPB1A" DesignTimeRectangle="659, 564, 265, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT PYMNT_VCHR_XREF_P…'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' aaname='Pay Group' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' aaname='Pay Group' type='text' class='PSEDITBOX PTCPEDITBOXWITHICON ' /&gt;" Guid="164fe2f7-3664-4668-aeab-7141e034c163" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQ0AAAAiCAYAAABFn4xfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJWSURBVHhe7d0/ixpBGIDxfFDxDxaCiKAIfgLTmUYU4zVBhDRRMSIpFFNEEQ4ipBCvueo4EJOgoqKF5xtmM46abHQ35fr84EWc2W0fdl1kXwkAuEA0ALhyFo374Td5++69vH5TYBiGsXqgunDKRENtfGh8ku8/fuoVALdO9UB14f7rMRwmGqooBAPAn2bzhdWHAxMNdSkCAHZO+0A0AFxFNAC4QjSAGzCZTKRer0u1WrU+1ff/RTQAD1sul5LL5cTn8/01+XxeVquVPtI5ogF41GazkWQyaRuMw6TTadlut/oMZ4gG4FGlUsnEIRKJSLPZlOFwKK1WS6LRqNkrl8v6DGeIBuBB6jeLQxRisZjMZjO985u6bUkkEtZ+IBCQxWKhd64jGoAHtdttE41ut6tXzw0GA3NMv9/Xq9cRDcCDGo2GCcLDw4NePff8/GyOUbcsThENwIPU1cUhCJ1OR6+eG41G5hiuNIAbN51OTRDUE5Tdbqd3jg6PYv1+P79pABApFosmHJlMRh4fH6147Pf7s9uXVColLy8v+qzriAbgUev1WuLxuInDpSkUClZMnCAagIfN53PJZrO2oVC3J6FQyHy/u7vTZ11GNIAb8PT0JLVazfrfSa/Xs37zUMbjsQSDQROOSqVirV9CNIAbp56inIbjX49oD4gGACsc4XDY0aNXogHA4vQfr0QDgCtEA4ArRAOAK0QDgCtEA4ArttHgZUkA7Gw2W/uXJVmvZfzIaxkBHKlgfP4ysH8to6I2VFHUpQjDMIzqwWkwlLNoAMA1RAOACyK/AP8dsk4h9OhpAAAAAElFTkSuQmCC" IsResponsive="True" Reference="ao86_PT9xkmS2L7lE3WumQ/9uwnHAu-UkCVMrapdulOdw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Regular Entry' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
@@ -294,11 +386,55 @@
                                   </Sequence>
                                 </If.Else>
                               </If>
-                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Peoplesoft\HoldAndSaveVoucher.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="410,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Peoplesoft\HoldAndSaveVoucher.xaml">
-                                <ui:InvokeWorkflowFile.Arguments>
-                                  <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
-                                </ui:InvokeWorkflowFile.Arguments>
-                              </ui:InvokeWorkflowFile>
+                              <TryCatch DisplayName="Try Catch - Hold Voucher" sap:VirtualizedContainerService.HintSize="438,341" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+                                <TryCatch.Try>
+                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Peoplesoft\HoldAndSaveVoucher.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Peoplesoft\HoldAndSaveVoucher.xaml">
+                                    <ui:InvokeWorkflowFile.Arguments>
+                                      <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+                                    </ui:InvokeWorkflowFile.Arguments>
+                                  </ui:InvokeWorkflowFile>
+                                </TryCatch.Try>
+                                <TryCatch.Catches>
+                                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ActivityAction x:TypeArguments="s:Exception">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                      </ActivityAction.Argument>
+                                      <If Condition="[exception.Message.Contains(&quot;SE&quot;) Or exception.Message.Contains(&quot;BE&quot;)]" DisplayName="If Hold Voucher Exception Message contains SE or BE" sap:VirtualizedContainerService.HintSize="334,182" sap2010:WorkflowViewState.IdRef="If_5">
+                                        <If.Then>
+                                          <Sequence sap:VirtualizedContainerService.HintSize="376,113" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <Rethrow DisplayName="Rethrow Clear Downloads Exceptions" sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="Rethrow_3" />
+                                          </Sequence>
+                                        </If.Then>
+                                        <If.Else>
+                                          <Sequence sap:VirtualizedContainerService.HintSize="376,178" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                            <Sequence.Variables>
+                                              <Variable x:TypeArguments="sd:DataRow" Name="drExceptionRow" />
+                                            </Sequence.Variables>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <Throw DisplayName="Throw SE - Hold Voucher" Exception="[New System.Exception(DirectCast(in_Config(&quot;SE&quot;),system.Data.DataRow)(&quot;Exception Details&quot;).ToString.Replace(&quot;{Exception Details}&quot;,&quot;Error occurred while putting voucher on hold. Technical Details: &quot; &amp; exception.Message.ToString))]" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="Throw_5" />
+                                          </Sequence>
+                                        </If.Else>
+                                      </If>
+                                    </ActivityAction>
+                                  </Catch>
+                                </TryCatch.Catches>
+                              </TryCatch>
                             </Sequence>
                           </ui:IfElseIfBlock.Then>
                         </ui:IfElseIfBlock>
@@ -311,84 +447,183 @@
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Peoplesoft\HoldAndSaveVoucher.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Peoplesoft\HoldAndSaveVoucher.xaml">
-                                <ui:InvokeWorkflowFile.Arguments>
-                                  <scg:Dictionary x:TypeArguments="x:String, Argument" />
-                                </ui:InvokeWorkflowFile.Arguments>
-                              </ui:InvokeWorkflowFile>
+                              <ui:LogMessage DisplayName="Log Message -Hold payment for Query 1,2,3,4" sap:VirtualizedContainerService.HintSize="438,143" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Holding payments for Query &quot; &amp; in_QueryName]" />
+                              <TryCatch DisplayName="Try Catch - Hold Voucher" sap:VirtualizedContainerService.HintSize="438,341" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                                <TryCatch.Try>
+                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Peoplesoft\HoldAndSaveVoucher.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Peoplesoft\HoldAndSaveVoucher.xaml">
+                                    <ui:InvokeWorkflowFile.Arguments>
+                                      <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+                                    </ui:InvokeWorkflowFile.Arguments>
+                                  </ui:InvokeWorkflowFile>
+                                </TryCatch.Try>
+                                <TryCatch.Catches>
+                                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ActivityAction x:TypeArguments="s:Exception">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                      </ActivityAction.Argument>
+                                      <If Condition="[exception.Message.Contains(&quot;SE&quot;) Or exception.Message.Contains(&quot;BE&quot;)]" DisplayName="If Hold Voucher Exception Message contains SE or BE" sap:VirtualizedContainerService.HintSize="334,182" sap2010:WorkflowViewState.IdRef="If_6">
+                                        <If.Then>
+                                          <Sequence sap:VirtualizedContainerService.HintSize="376,113" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <Rethrow DisplayName="Rethrow Clear Downloads Exceptions" sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="Rethrow_4" />
+                                          </Sequence>
+                                        </If.Then>
+                                        <If.Else>
+                                          <Sequence sap:VirtualizedContainerService.HintSize="376,178" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                            <Sequence.Variables>
+                                              <Variable x:TypeArguments="sd:DataRow" Name="drExceptionRow" />
+                                            </Sequence.Variables>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <Throw DisplayName="Throw SE - Hold Voucher" Exception="[New System.Exception(DirectCast(in_Config(&quot;SE&quot;),system.Data.DataRow)(&quot;Exception Details&quot;).ToString.Replace(&quot;{Exception Details}&quot;,&quot;Error occurred while putting voucher on hold. Technical Details: &quot; &amp; exception.Message.ToString))]" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="Throw_6" />
+                                          </Sequence>
+                                        </If.Else>
+                                      </If>
+                                    </ActivityAction>
+                                  </Catch>
+                                </TryCatch.Catches>
+                              </TryCatch>
                             </Sequence>
                           </ui:IfElseIfBlock.Then>
                         </ui:IfElseIfBlock>
                       </sc:BindingList>
                     </ui:IfElseIf.ConditionBlocks>
                   </ui:IfElseIf>
-                  <uix:NCheckState DisplayName="Check App State 'Saving Page'" sap:VirtualizedContainerService.HintSize="954,475" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="7694299b-deec-4217-886b-d38c00a6b64f" Timeout="30" Version="V3">
-                    <uix:NCheckState.IfExists>
-                      <Sequence DisplayName="Saving page popup appears" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <TryCatch DisplayName="Try Catch - Save page" sap:VirtualizedContainerService.HintSize="1054,979" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+                    <TryCatch.Try>
+                      <Sequence DisplayName="Check Save page" sap:VirtualizedContainerService.HintSize="1016,751" sap2010:WorkflowViewState.IdRef="Sequence_26">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NCheckState DisplayName="Check App State 'Saving Page'" sap:VirtualizedContainerService.HintSize="954,298" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="7694299b-deec-4217-886b-d38c00a6b64f" Timeout="30" Version="V3">
+                          <uix:NCheckState.IfExists>
+                            <Sequence DisplayName="Saving page popup appears" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:LogMessage DisplayName="Log Message - Saving in progress" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Saving in progress...&quot;]" />
+                            </Sequence>
+                          </uix:NCheckState.IfExists>
+                          <uix:NCheckState.IfNotExists>
+                            <Sequence DisplayName="Saving page popup does not appear" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:LogMessage DisplayName="Log Message - Saving pop up not appear" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Saving notification did not appear. Returning to search after timeout&quot;]" />
+                            </Sequence>
+                          </uix:NCheckState.IfNotExists>
+                          <uix:NCheckState.Target>
+                            <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/ENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL?PortalActualURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL&amp;PortalContentURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL&amp;PortalContentProvider=ERP&amp;PortalCRefLabel=Regular%20Entry&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsp%2fSOKLFTSTNSS%2f&amp;PortalURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2f&amp;PortalHostNode=ERP&amp;NoCrumbs=yes&amp;PortalKeyStruct=yes" ContentHash="VJuVJccasUeJdGgY7nu0aw" DesignTimeRectangle="12, 120, 866, 53" DesignTimeScaleFactor="1" FriendlyName="'Saving Page'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='SAVED_win0' tag='DIV' visibleinnertext='Saving Page' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='SAVED_win0' tag='DIV' visibleinnertext='Saving Page' type='' class='PTCPSAVETEXTMSGNODE' check:text='Saving Page' /&gt;" Guid="0a818aca-dd4a-42d8-ac93-d31267110cd1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAABzsAAAAUCAYAAAAa5FDTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAP4SURBVHhe7d1NTxRJAIBhftkcuPkfuK0IDCEIG1g2TjYbPHgx3km8c/YgrsYYwTVsou5egHgxUffk/omSnqZ7+qMaZsgMPbM+hyehv6qmub6p6rm//jsLAAAAAAAAALNG7AQAAAAAAABmktgJAAAAAAAAzCSxEwAAAAAAAJhJYicAAEBLHvfmwtzcQGfvMHrf9eyHbn/cjfA4en1csnkibj0MT6PPAAAAwHiInQAAAC2ohs7M+ILnFMTOhOAJAADABImdAAAANy4LhPPh/kl67une/IzGwYaoevIwdCrvCAAAAOMmdgIAANy4wWrIS1dyHmykAbSge5BcOwz3b9VDYh5Me/vnx9UIWTjOQ2QqHTOTjZ1Ixo/PNdAQOwvj5OM3vk/9mea5i/ckJr1yFQAAgGkmdgIAALSguo1tOfqdqwTJgTTuZWFzEEurYbApdsZk91RDYmI+dGrBsaghdlZXdl7xPsPNHbsnUZkbAACAH4bYCQAA0Ip43IsHxUQWFSvxMNv2tnp8SezMA2ljkCz8jnw1ZtNvuyyinmvclrfhfS6bOzsujFmPvgAAAPxIxE4AAIA25ZEvU12lWI2JgxiYrg5Nj+vRryl2FmJidTVoFhP72+A23JOfz1wSO0vjNN0//Nz5Nr0x0bkAAABoy5P3L8PObi8c/ftP7dqLj8fhl9/vhVef3tWujUrsBAAAmAZNqyxrKzUL0fEiEHb29iNBsil2FmPqOGNnNdJWXPU+YicAAMD/xvG307C6vhYWFhbCz/e2w9HXQfD84/TPsNRd7l/bffSg9Nx1iJ0AAAA3LQt7pS1ey/Ev+6Zn45azpWculIJfNULGomQlZMbmyH5rad6i2Lh1V77PMHNH/28AAABMo2cnb8Li8lI/at7d3gyvP3+Inos9OwqxEwAA4MZVImXRRchrXsVYjo5ZREx0D2JzjBA78+Oi+dAZw8rOq99nmLlj96TK7w4AAMA0SFZxLq6kcXN9azP8dOd2vtrz8Mvf0WdGJXYCAAC0IhLuSisWy9eTFZH173Key1dEVmPjdWJn8Vx2PnZP0XCxc7j3GWbu8jgJoRMAAGB6PT97G5ZWV/qRM7HV24l+x/O6xE4AAABSeTgtBMTY9rKT0ObcAAAATMyLj8dhZa0rdgIAADBp9VWTuYl/J7PNuQEAAJiEZBvbpe5yP3Kub22E20uL/b+TbWyPvo4neIqdAAAAFGTb0rYRG9ucGwAAgHF6dvImLC6n3+u8u70ZXn/+ED0Xe3YUYicAAAAAAAAwNsffTsPq+lp0FWc/eK6kwXP30YPSc9chdgIAAAAAAABj9eT9y7Cz24t+n/P52duw/duv4dWnd7VrozkL3wEOzCB+tMzgMAAAAABJRU5ErkJggg==" InformativeScreenshot="e74fd362eb4b8e264e221e9830db761f.png" Reference="ao86_PT9xkmS2L7lE3WumQ/NG0V1UZL4UGSA_s9a-jMuQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Regular Entry' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive" />
+                          </uix:NCheckState.Target>
+                        </uix:NCheckState>
+                        <uix:NCheckState DisplayName="Check App State 'Saving Page'" sap:VirtualizedContainerService.HintSize="954,298" sap2010:WorkflowViewState.IdRef="NCheckState_3" Mode="WaitDisappear" ScopeIdentifier="7694299b-deec-4217-886b-d38c00a6b64f" Timeout="30" Version="V3">
+                          <uix:NCheckState.IfExists>
+                            <Sequence DisplayName="Saving page popup disappears" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:LogMessage DisplayName="Log Message - Page saved" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Page saved. Returning to search.&quot;]" />
+                            </Sequence>
+                          </uix:NCheckState.IfExists>
+                          <uix:NCheckState.IfNotExists>
+                            <Sequence DisplayName="Saving page popup does not disappear" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:LogMessage DisplayName="Log Message - Save is still in progress" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Page save is still in progress. Returning to search.&quot;]" />
+                            </Sequence>
+                          </uix:NCheckState.IfNotExists>
+                          <uix:NCheckState.Target>
+                            <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/ENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL?PortalActualURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL&amp;PortalContentURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL&amp;PortalContentProvider=ERP&amp;PortalCRefLabel=Regular%20Entry&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsp%2fSOKLFTSTNSS%2f&amp;PortalURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2f&amp;PortalHostNode=ERP&amp;NoCrumbs=yes&amp;PortalKeyStruct=yes" ContentHash="VJuVJccasUeJdGgY7nu0aw" DesignTimeRectangle="12, 120, 866, 53" DesignTimeScaleFactor="1" FriendlyName="'Saving Page'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='SAVED_win0' tag='DIV' visibleinnertext='Saving Page' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='SAVED_win0' tag='DIV' visibleinnertext='Saving Page' type='' class='PTCPSAVETEXTMSGNODE' check:text='Saving Page' /&gt;" Guid="0a818aca-dd4a-42d8-ac93-d31267110cd1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAABzsAAAAUCAYAAAAa5FDTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAP4SURBVHhe7d1NTxRJAIBhftkcuPkfuK0IDCEIG1g2TjYbPHgx3km8c/YgrsYYwTVsou5egHgxUffk/omSnqZ7+qMaZsgMPbM+hyehv6qmub6p6rm//jsLAAAAAAAAALNG7AQAAAAAAABmktgJAAAAAAAAzCSxEwAAAAAAAJhJYicAAEBLHvfmwtzcQGfvMHrf9eyHbn/cjfA4en1csnkibj0MT6PPAAAAwHiInQAAAC2ohs7M+ILnFMTOhOAJAADABImdAAAANy4LhPPh/kl67une/IzGwYaoevIwdCrvCAAAAOMmdgIAANy4wWrIS1dyHmykAbSge5BcOwz3b9VDYh5Me/vnx9UIWTjOQ2QqHTOTjZ1Ixo/PNdAQOwvj5OM3vk/9mea5i/ckJr1yFQAAgGkmdgIAALSguo1tOfqdqwTJgTTuZWFzEEurYbApdsZk91RDYmI+dGrBsaghdlZXdl7xPsPNHbsnUZkbAACAH4bYCQAA0Ip43IsHxUQWFSvxMNv2tnp8SezMA2ljkCz8jnw1ZtNvuyyinmvclrfhfS6bOzsujFmPvgAAAPxIxE4AAIA25ZEvU12lWI2JgxiYrg5Nj+vRryl2FmJidTVoFhP72+A23JOfz1wSO0vjNN0//Nz5Nr0x0bkAAABoy5P3L8PObi8c/ftP7dqLj8fhl9/vhVef3tWujUrsBAAAmAZNqyxrKzUL0fEiEHb29iNBsil2FmPqOGNnNdJWXPU+YicAAMD/xvG307C6vhYWFhbCz/e2w9HXQfD84/TPsNRd7l/bffSg9Nx1iJ0AAAA3LQt7pS1ey/Ev+6Zn45azpWculIJfNULGomQlZMbmyH5rad6i2Lh1V77PMHNH/28AAABMo2cnb8Li8lI/at7d3gyvP3+Inos9OwqxEwAA4MZVImXRRchrXsVYjo5ZREx0D2JzjBA78+Oi+dAZw8rOq99nmLlj96TK7w4AAMA0SFZxLq6kcXN9azP8dOd2vtrz8Mvf0WdGJXYCAAC0IhLuSisWy9eTFZH173Key1dEVmPjdWJn8Vx2PnZP0XCxc7j3GWbu8jgJoRMAAGB6PT97G5ZWV/qRM7HV24l+x/O6xE4AAABSeTgtBMTY9rKT0ObcAAAATMyLj8dhZa0rdgIAADBp9VWTuYl/J7PNuQEAAJiEZBvbpe5yP3Kub22E20uL/b+TbWyPvo4neIqdAAAAFGTb0rYRG9ucGwAAgHF6dvImLC6n3+u8u70ZXn/+ED0Xe3YUYicAAAAAAAAwNsffTsPq+lp0FWc/eK6kwXP30YPSc9chdgIAAAAAAABj9eT9y7Cz24t+n/P52duw/duv4dWnd7VrozkL3wEOzCB+tMzgMAAAAABJRU5ErkJggg==" InformativeScreenshot="e74fd362eb4b8e264e221e9830db761f.png" Reference="ao86_PT9xkmS2L7lE3WumQ/NG0V1UZL4UGSA_s9a-jMuQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Regular Entry' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive" />
+                          </uix:NCheckState.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NCheckState>
+                      </Sequence>
+                    </TryCatch.Try>
+                    <TryCatch.Catches>
+                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="1020,21" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log Message - Saving in progress" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Saving in progress...&quot;]" />
-                      </Sequence>
-                    </uix:NCheckState.IfExists>
-                    <uix:NCheckState.IfNotExists>
-                      <Sequence DisplayName="Saving page popup does not appear" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_13">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log Message - Saving pop up not appear" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Saving notification did not appear. Returning to search after timeout&quot;]" />
-                      </Sequence>
-                    </uix:NCheckState.IfNotExists>
-                    <uix:NCheckState.Target>
-                      <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/ENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL?PortalActualURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL&amp;PortalContentURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL&amp;PortalContentProvider=ERP&amp;PortalCRefLabel=Regular%20Entry&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsp%2fSOKLFTSTNSS%2f&amp;PortalURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2f&amp;PortalHostNode=ERP&amp;NoCrumbs=yes&amp;PortalKeyStruct=yes" ContentHash="VJuVJccasUeJdGgY7nu0aw" DesignTimeRectangle="12, 120, 866, 53" DesignTimeScaleFactor="1" FriendlyName="'Saving Page'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='SAVED_win0' tag='DIV' visibleinnertext='Saving Page' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='SAVED_win0' tag='DIV' visibleinnertext='Saving Page' type='' class='PTCPSAVETEXTMSGNODE' check:text='Saving Page' /&gt;" Guid="0a818aca-dd4a-42d8-ac93-d31267110cd1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAABzsAAAAUCAYAAAAa5FDTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAP4SURBVHhe7d1NTxRJAIBhftkcuPkfuK0IDCEIG1g2TjYbPHgx3km8c/YgrsYYwTVsou5egHgxUffk/omSnqZ7+qMaZsgMPbM+hyehv6qmub6p6rm//jsLAAAAAAAAALNG7AQAAAAAAABmktgJAAAAAAAAzCSxEwAAAAAAAJhJYicAAEBLHvfmwtzcQGfvMHrf9eyHbn/cjfA4en1csnkibj0MT6PPAAAAwHiInQAAAC2ohs7M+ILnFMTOhOAJAADABImdAAAANy4LhPPh/kl67une/IzGwYaoevIwdCrvCAAAAOMmdgIAANy4wWrIS1dyHmykAbSge5BcOwz3b9VDYh5Me/vnx9UIWTjOQ2QqHTOTjZ1Ixo/PNdAQOwvj5OM3vk/9mea5i/ckJr1yFQAAgGkmdgIAALSguo1tOfqdqwTJgTTuZWFzEEurYbApdsZk91RDYmI+dGrBsaghdlZXdl7xPsPNHbsnUZkbAACAH4bYCQAA0Ip43IsHxUQWFSvxMNv2tnp8SezMA2ljkCz8jnw1ZtNvuyyinmvclrfhfS6bOzsujFmPvgAAAPxIxE4AAIA25ZEvU12lWI2JgxiYrg5Nj+vRryl2FmJidTVoFhP72+A23JOfz1wSO0vjNN0//Nz5Nr0x0bkAAABoy5P3L8PObi8c/ftP7dqLj8fhl9/vhVef3tWujUrsBAAAmAZNqyxrKzUL0fEiEHb29iNBsil2FmPqOGNnNdJWXPU+YicAAMD/xvG307C6vhYWFhbCz/e2w9HXQfD84/TPsNRd7l/bffSg9Nx1iJ0AAAA3LQt7pS1ey/Ev+6Zn45azpWculIJfNULGomQlZMbmyH5rad6i2Lh1V77PMHNH/28AAABMo2cnb8Li8lI/at7d3gyvP3+Inos9OwqxEwAA4MZVImXRRchrXsVYjo5ZREx0D2JzjBA78+Oi+dAZw8rOq99nmLlj96TK7w4AAMA0SFZxLq6kcXN9azP8dOd2vtrz8Mvf0WdGJXYCAAC0IhLuSisWy9eTFZH173Key1dEVmPjdWJn8Vx2PnZP0XCxc7j3GWbu8jgJoRMAAGB6PT97G5ZWV/qRM7HV24l+x/O6xE4AAABSeTgtBMTY9rKT0ObcAAAATMyLj8dhZa0rdgIAADBp9VWTuYl/J7PNuQEAAJiEZBvbpe5yP3Kub22E20uL/b+TbWyPvo4neIqdAAAAFGTb0rYRG9ucGwAAgHF6dvImLC6n3+u8u70ZXn/+ED0Xe3YUYicAAAAAAAAwNsffTsPq+lp0FWc/eK6kwXP30YPSc9chdgIAAAAAAABj9eT9y7Cz24t+n/P52duw/duv4dWnd7VrozkL3wEOzCB+tMzgMAAAAABJRU5ErkJggg==" InformativeScreenshot="e74fd362eb4b8e264e221e9830db761f.png" Reference="ao86_PT9xkmS2L7lE3WumQ/NG0V1UZL4UGSA_s9a-jMuQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Regular Entry' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive" />
-                    </uix:NCheckState.Target>
-                  </uix:NCheckState>
-                  <uix:NCheckState DisplayName="Check App State 'Saving Page'" sap:VirtualizedContainerService.HintSize="954,475" sap2010:WorkflowViewState.IdRef="NCheckState_3" Mode="WaitDisappear" ScopeIdentifier="7694299b-deec-4217-886b-d38c00a6b64f" Timeout="30" Version="V3">
-                    <uix:NCheckState.IfExists>
-                      <Sequence DisplayName="Saving page popup disappears" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_14">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log Message - Page saved" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Page saved. Returning to search.&quot;]" />
-                      </Sequence>
-                    </uix:NCheckState.IfExists>
-                    <uix:NCheckState.IfNotExists>
-                      <Sequence DisplayName="Saving page popup does not disappear" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_15">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log Message - Save is still in progress" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Page save is still in progress. Returning to search.&quot;]" />
-                      </Sequence>
-                    </uix:NCheckState.IfNotExists>
-                    <uix:NCheckState.Target>
-                      <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/ENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL?PortalActualURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL&amp;PortalContentURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fENTER_VOUCHER_INFORMATION.VCHR_EXPRESS.GBL&amp;PortalContentProvider=ERP&amp;PortalCRefLabel=Regular%20Entry&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsp%2fSOKLFTSTNSS%2f&amp;PortalURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2f&amp;PortalHostNode=ERP&amp;NoCrumbs=yes&amp;PortalKeyStruct=yes" ContentHash="VJuVJccasUeJdGgY7nu0aw" DesignTimeRectangle="12, 120, 866, 53" DesignTimeScaleFactor="1" FriendlyName="'Saving Page'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='SAVED_win0' tag='DIV' visibleinnertext='Saving Page' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='SAVED_win0' tag='DIV' visibleinnertext='Saving Page' type='' class='PTCPSAVETEXTMSGNODE' check:text='Saving Page' /&gt;" Guid="0a818aca-dd4a-42d8-ac93-d31267110cd1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAABzsAAAAUCAYAAAAa5FDTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAP4SURBVHhe7d1NTxRJAIBhftkcuPkfuK0IDCEIG1g2TjYbPHgx3km8c/YgrsYYwTVsou5egHgxUffk/omSnqZ7+qMaZsgMPbM+hyehv6qmub6p6rm//jsLAAAAAAAAALNG7AQAAAAAAABmktgJAAAAAAAAzCSxEwAAAAAAAJhJYicAAEBLHvfmwtzcQGfvMHrf9eyHbn/cjfA4en1csnkibj0MT6PPAAAAwHiInQAAAC2ohs7M+ILnFMTOhOAJAADABImdAAAANy4LhPPh/kl67une/IzGwYaoevIwdCrvCAAAAOMmdgIAANy4wWrIS1dyHmykAbSge5BcOwz3b9VDYh5Me/vnx9UIWTjOQ2QqHTOTjZ1Ixo/PNdAQOwvj5OM3vk/9mea5i/ckJr1yFQAAgGkmdgIAALSguo1tOfqdqwTJgTTuZWFzEEurYbApdsZk91RDYmI+dGrBsaghdlZXdl7xPsPNHbsnUZkbAACAH4bYCQAA0Ip43IsHxUQWFSvxMNv2tnp8SezMA2ljkCz8jnw1ZtNvuyyinmvclrfhfS6bOzsujFmPvgAAAPxIxE4AAIA25ZEvU12lWI2JgxiYrg5Nj+vRryl2FmJidTVoFhP72+A23JOfz1wSO0vjNN0//Nz5Nr0x0bkAAABoy5P3L8PObi8c/ftP7dqLj8fhl9/vhVef3tWujUrsBAAAmAZNqyxrKzUL0fEiEHb29iNBsil2FmPqOGNnNdJWXPU+YicAAMD/xvG307C6vhYWFhbCz/e2w9HXQfD84/TPsNRd7l/bffSg9Nx1iJ0AAAA3LQt7pS1ey/Ev+6Zn45azpWculIJfNULGomQlZMbmyH5rad6i2Lh1V77PMHNH/28AAABMo2cnb8Li8lI/at7d3gyvP3+Inos9OwqxEwAA4MZVImXRRchrXsVYjo5ZREx0D2JzjBA78+Oi+dAZw8rOq99nmLlj96TK7w4AAMA0SFZxLq6kcXN9azP8dOd2vtrz8Mvf0WdGJXYCAAC0IhLuSisWy9eTFZH173Key1dEVmPjdWJn8Vx2PnZP0XCxc7j3GWbu8jgJoRMAAGB6PT97G5ZWV/qRM7HV24l+x/O6xE4AAABSeTgtBMTY9rKT0ObcAAAATMyLj8dhZa0rdgIAADBp9VWTuYl/J7PNuQEAAJiEZBvbpe5yP3Kub22E20uL/b+TbWyPvo4neIqdAAAAFGTb0rYRG9ucGwAAgHF6dvImLC6n3+u8u70ZXn/+ED0Xe3YUYicAAAAAAAAwNsffTsPq+lp0FWc/eK6kwXP30YPSc9chdgIAAAAAAABj9eT9y7Cz24t+n/P52duw/duv4dWnd7VrozkL3wEOzCB+tMzgMAAAAABJRU5ErkJggg==" InformativeScreenshot="e74fd362eb4b8e264e221e9830db761f.png" Reference="ao86_PT9xkmS2L7lE3WumQ/NG0V1UZL4UGSA_s9a-jMuQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Regular Entry' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive" />
-                    </uix:NCheckState.Target>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </uix:NCheckState>
+                        <ActivityAction x:TypeArguments="s:Exception">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                          </ActivityAction.Argument>
+                          <If Condition="[exception.Message.Contains(&quot;SE&quot;) Or exception.Message.Contains(&quot;BE&quot;)]" DisplayName="If Save page Exception Message contains SE or BE" sap:VirtualizedContainerService.HintSize="410,473" sap2010:WorkflowViewState.IdRef="If_7">
+                            <If.Then>
+                              <Sequence sap:VirtualizedContainerService.HintSize="376,113" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Rethrow DisplayName="Rethrow Clear Downloads Exceptions" sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="Rethrow_5" />
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence sap:VirtualizedContainerService.HintSize="376,178" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                <Sequence.Variables>
+                                  <Variable x:TypeArguments="sd:DataRow" Name="drExceptionRow" />
+                                </Sequence.Variables>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Throw DisplayName="Throw SE - Save page" Exception="[New System.Exception(DirectCast(in_Config(&quot;SE&quot;),system.Data.DataRow)(&quot;Exception Details&quot;).ToString.Replace(&quot;{Exception Details}&quot;,&quot;Error occurred while saving page after clicking Save button. Technical Details: &quot; &amp; exception.Message.ToString))]" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="Throw_7" />
+                              </Sequence>
+                            </If.Else>
+                          </If>
+                        </ActivityAction>
+                      </Catch>
+                    </TryCatch.Catches>
+                  </TryCatch>
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Payment Tab does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Payment Tab does not appear" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message -Payment tab unavailable" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;Payment tab is not available in voucher page&quot;]" />
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>

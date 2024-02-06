@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1474,3286</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1474,3246</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SearchVoucher_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -104,7 +104,7 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SearchVoucher" sap:VirtualizedContainerService.HintSize="1112,3181" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SearchVoucher" sap:VirtualizedContainerService.HintSize="652,3181" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strURL" />
     </Sequence.Variables>
@@ -113,20 +113,20 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - SearchVoucher Workflow" sap:VirtualizedContainerService.HintSize="1050,141" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Starting SearchVoucher workflow...&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge: Voucher: Regular Entry" sap:VirtualizedContainerService.HintSize="1050,2889" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="81f0ae9e-c6f3-40a4-804d-e6680ec86e6d" Version="V2">
+    <ui:LogMessage DisplayName="Log Message - SearchVoucher Workflow" sap:VirtualizedContainerService.HintSize="590,141" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Starting SearchVoucher workflow...&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge: Voucher: Regular Entry" sap:VirtualizedContainerService.HintSize="590,2889" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="81f0ae9e-c6f3-40a4-804d-e6680ec86e6d" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1016,2672" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="556,2672" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check App State 'Search'" sap:VirtualizedContainerService.HintSize="954,2042" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="81f0ae9e-c6f3-40a4-804d-e6680ec86e6d" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'Search'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="494,2042" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="81f0ae9e-c6f3-40a4-804d-e6680ec86e6d" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Search Button appears" sap:VirtualizedContainerService.HintSize="450,1825" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
@@ -225,7 +225,7 @@
                 </uix:TargetAnchorable>
               </uix:NCheckState.Target>
             </uix:NCheckState>
-            <uix:NCheckState DisplayName="Check App State 'Payments'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="954,475" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="81f0ae9e-c6f3-40a4-804d-e6680ec86e6d" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'Payments'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="494,475" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="81f0ae9e-c6f3-40a4-804d-e6680ec86e6d" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
