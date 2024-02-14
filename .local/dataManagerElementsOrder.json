@@ -12,6 +12,11 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "drExceptionRow&Sequence_58",
+        "drExceptionRow&Sequence_55",
+        "drExceptionRow&Sequence_60",
+        "drExceptionRow&Sequence_62",
+        "drExceptionRow&Sequence_63",
         "dateProcessStartTime&StateMachine_1",
         "dateProcessEndTime&StateMachine_1",
         "strScreenshotFilePath&StateMachine_1",
@@ -124,15 +129,7 @@
     {
       "Path": "Test.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "checked&Sequence_1",
-        "intCount&Sequence_1",
-        "boolFound&Sequence_1",
-        "strSharepointURL&Sequence_1",
-        "dt_SupplierLocation&Sequence_1",
-        "strURL&Sequence_1",
-        "ExtractDataTable&Sequence_1"
-      ],
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
