@@ -12,6 +12,7 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "DateObj&Sequence_49",
         "drExceptionRow&Sequence_58",
         "drExceptionRow&Sequence_55",
         "drExceptionRow&Sequence_60",
@@ -81,6 +82,9 @@
       "Path": "Framework/Process.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "boolLocationKeyExist&Sequence_1",
+        "drExceptionRow&Sequence_4",
+        "drExceptionRow&Sequence_6",
         "strLocation&Sequence_1",
         "strQueryName&Sequence_1",
         "strVoucherID&Sequence_1",
@@ -97,6 +101,11 @@
       "Path": "Peoplesoft/CompleteVoucherPaymentPage.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "drExceptionRow&Sequence_16",
+        "drExceptionRow&Sequence_18",
+        "drExceptionRow&Sequence_20",
+        "drExceptionRow&Sequence_21",
+        "drExceptionRow&Sequence_22",
         "strURL&Sequence_1",
         "strLocationDescription&Sequence_7",
         "dt_SupplierLocation&Sequence_5",
@@ -129,7 +138,9 @@
     {
       "Path": "Test.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "QueueItems&Sequence_1"
+      ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -138,6 +149,7 @@
       "Path": "Framework/InitAllApplications.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "boolFolderExists&Sequence_47",
         "arrFiles&Sequence_11",
         "boolFolderExists&Sequence_13",
         "secstrPassword&Sequence_10",
@@ -169,10 +181,15 @@
       "Path": "Peoplesoft/HoldAndSaveVoucher.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "elementHoldReason&Sequence_3",
+        "ienumChildren&Sequence_3",
+        "strAttribute&Sequence_7",
         "boolChecked&Sequence_2",
         "strURL&Sequence_1"
       ],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
@@ -189,6 +206,53 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllSettings.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_SettingsAndConstants&Sequence_5",
+        "dt_Assets&Sequence_6",
+        "AssetValue&Sequence_11",
+        "dt_EmailTemplate&Sequence_12"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ConfigFile",
+        "in_ConfigSheets",
+        "out_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Peoplesoft/SearchVoucher.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strURL&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_strBU",
+        "in_strVoucherID",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Misc/CreateSummaryReport.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strSummaryFilePath&Sequence_1",
+        "QueueItems&Sequence_1",
+        "dt_Summary&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "in_datetimeStartTime",
+        "in_datetimeEndTime"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }
