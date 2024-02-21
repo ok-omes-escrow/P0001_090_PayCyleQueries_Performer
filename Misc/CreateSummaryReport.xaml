@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1474,2824</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1474,2670</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CreateSummary_Report_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -138,7 +138,7 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CreateSummaryReport" sap:VirtualizedContainerService.HintSize="644,2759" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CreateSummaryReport" sap:VirtualizedContainerService.HintSize="644,2565" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strSummaryFilePath" />
       <Variable x:TypeArguments="scg:IEnumerable(ui:QueueItem)" Name="QueueItems" />
@@ -150,15 +150,14 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message - Create Summary Report" sap:VirtualizedContainerService.HintSize="582,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Starting Create Summary Report...&quot;]" />
-    <Assign DisplayName="Assign strSummaryFilePath" sap:VirtualizedContainerService.HintSize="582,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign DisplayName="Assign strSummaryFilePath" sap:VirtualizedContainerService.HintSize="582,82" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[strSummaryFilePath]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">[Path.Combine(in_Config("SummaryPath").ToString,"Summary_Template_Vouchers.xlsx")]</InArgument>
+        <InArgument x:TypeArguments="x:String">[System.IO.Path.Combine(in_Config("LocalFolder").ToString,in_Config("logF_BusinessProcessName").ToString,in_Config("LocalSummaryFolderName").ToString,in_Config("SharepointSummaryTemplateName").ToString)]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:CopyFile ContinueOnError="{x:Null}" Destination="[strSummaryFilePath]" DisplayName="Copy File to Summary folder" sap:VirtualizedContainerService.HintSize="582,154" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="Data\Summary Report\Summary_Template_Vouchers.xlsx" />
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="582,141" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Filtering Date Items start : &quot;+in_datetimeStartTime.ToString +Environment.NewLine+&quot;Filtering Date Items end: &quot;+in_datetimeEndTime.ToString]" />
     <ui:GetQueueItems Duration="{x:Null}" Priority="{x:Null}" Reference="{x:Null}" Skip="{x:Null}" TimeoutMS="{x:Null}" Top="{x:Null}" DisplayName="Get Queue Items - to add to summary file" FilterStrategy="Equals" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" From="[in_datetimeStartTime]" sap:VirtualizedContainerService.HintSize="582,143" sap2010:WorkflowViewState.IdRef="GetQueueItems_1" QueueItemStates="Failed, Successful" QueueName="[in_Config(&quot;OrchestratorQueueName&quot;).ToString]" Result="[QueueItems]" To="[in_datetimeEndTime]" />
     <ui:ExcelApplicationScope Password="{x:Null}" CreateNewFile="False" DisplayName="Excel Application Scope - for summary file" sap:VirtualizedContainerService.HintSize="582,1453" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[strSummaryFilePath]">
