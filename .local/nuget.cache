@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "DOf7GfDLHTOnuyDdkKjGFPAT2spVgIaNyD1/vLnuMlVy1zjYyAPvXIyb6Jzt78JROypP0S4FZX0J26PnK8Lb+A==",
+  "dgSpecHash": "vPYLX0IxkMMgQTE41CLCXU9GhX60Fr/9BkFaFdpzwaedjH15m05P1YC3DLjE8l8SMSm/Va1nFwEzn8/pcCSCHg==",
   "success": true,
   "projectFilePath": "C:\\Users\\55648C\\Documents\\SOK_GIT\\P0001_090_PayCyleQueries_Performer\\.local\\",
   "expectedPackageFiles": [
@@ -12,8 +12,8 @@
     "C:\\Users\\55648C\\.nuget\\packages\\excelnumberformat\\1.0.10\\excelnumberformat.1.0.10.nupkg.sha512",
     "C:\\Users\\55648C\\.nuget\\packages\\lib_graphapi_1.0\\1.0.1-alpha.2\\lib_graphapi_1.0.1.0.1-alpha.2.nupkg.sha512",
     "C:\\Users\\55648C\\.nuget\\packages\\lib_graphapi_1.0.library.runtime\\1.0.1-alpha.2\\lib_graphapi_1.0.library.runtime.1.0.1-alpha.2.nupkg.sha512",
-    "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2\\1.0.1-alpha.37\\lib_peoplesoft_9.2.1.0.1-alpha.37.nupkg.sha512",
-    "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.1-alpha.37\\lib_peoplesoft_9.2.library.runtime.1.0.1-alpha.37.nupkg.sha512",
+    "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2\\1.0.1\\lib_peoplesoft_9.2.1.0.1.nupkg.sha512",
+    "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.1\\lib_peoplesoft_9.2.library.runtime.1.0.1.nupkg.sha512",
     "C:\\Users\\55648C\\.nuget\\packages\\markdig.signed\\0.21.1\\markdig.signed.0.21.1.nupkg.sha512",
     "C:\\Users\\55648C\\.nuget\\packages\\microsoft.applicationinsights\\2.15.0\\microsoft.applicationinsights.2.15.0.nupkg.sha512",
     "C:\\Users\\55648C\\.nuget\\packages\\microsoft.aspnet.signalr.client\\2.4.0\\microsoft.aspnet.signalr.client.2.4.0.nupkg.sha512",
