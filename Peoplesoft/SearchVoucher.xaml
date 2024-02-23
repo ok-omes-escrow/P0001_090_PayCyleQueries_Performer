@@ -197,7 +197,7 @@
                       </ActivityFunc>
                     </ui:RetryScope.Condition>
                   </ui:RetryScope>
-                  <ui:LogMessage DisplayName="Log Message - Type Voucher" sap:VirtualizedContainerService.HintSize="492,143" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Tying into Voucher ID field&quot;]" />
+                  <ui:LogMessage DisplayName="Log Message - Type Voucher" sap:VirtualizedContainerService.HintSize="492,143" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Typing into Voucher ID field&quot;]" />
                   <ui:RetryScope DisplayName="Retry Scope - Type Voucher" sap:VirtualizedContainerService.HintSize="492,1217" sap2010:WorkflowViewState.IdRef="RetryScope_2">
                     <ui:RetryScope.ActivityBody>
                       <ActivityAction>
@@ -292,7 +292,7 @@
                 </uix:TargetAnchorable>
               </uix:NCheckState.Target>
             </uix:NCheckState>
-            <uix:NCheckState DisplayName="Check App State 'Payments'" sap:VirtualizedContainerService.HintSize="954,605" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="81f0ae9e-c6f3-40a4-804d-e6680ec86e6d" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'Payments'" sap:VirtualizedContainerService.HintSize="1058,605" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="81f0ae9e-c6f3-40a4-804d-e6680ec86e6d" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
