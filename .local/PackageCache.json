@@ -297,18 +297,18 @@
     {
       "Package": {
         "Id": "LIB_PeopleSoft_9.2",
-        "Version": "1.0.2"
+        "Version": "1.0.3-alpha"
       },
       "Assemblies": [
         "C:\\Users\\55648C\\.nuget\\packages\\csvhelper\\16.0.0\\lib/netstandard2.1/CsvHelper.dll",
-        "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.2\\lib/net6.0-windows7.0/LIB_PeopleSoft_9.2.dll",
-        "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.2\\lib/net6.0-windows7.0/LIB_PeopleSoft_9.2_Expressions_13076248.dll",
-        "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.2\\lib/net6.0-windows7.0/LIB_PeopleSoft_9.2_Expressions_14336835.dll",
-        "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.2\\lib/net6.0-windows7.0/LIB_PeopleSoft_9.2_Expressions_16600924.dll",
-        "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.2\\lib/net6.0-windows7.0/LIB_PeopleSoft_9.2_Expressions_24393646.dll",
-        "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.2\\lib/net6.0-windows7.0/LIB_PeopleSoft_9.2_Expressions_35239291.dll",
-        "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.2\\lib/net6.0-windows7.0/LIB_PeopleSoft_9.2_Expressions_49214150.dll",
-        "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.2\\lib/net6.0-windows7.0/LIB_PeopleSoft_9.2_Expressions_7348436.dll",
+        "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.3-alpha\\lib/net6.0-windows7.0/LIB_PeopleSoft_9.2.dll",
+        "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.3-alpha\\lib/net6.0-windows7.0/LIB_PeopleSoft_9.2_Expressions_25360113.dll",
+        "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.3-alpha\\lib/net6.0-windows7.0/LIB_PeopleSoft_9.2_Expressions_45485984.dll",
+        "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.3-alpha\\lib/net6.0-windows7.0/LIB_PeopleSoft_9.2_Expressions_47888759.dll",
+        "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.3-alpha\\lib/net6.0-windows7.0/LIB_PeopleSoft_9.2_Expressions_49991340.dll",
+        "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.3-alpha\\lib/net6.0-windows7.0/LIB_PeopleSoft_9.2_Expressions_60082571.dll",
+        "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.3-alpha\\lib/net6.0-windows7.0/LIB_PeopleSoft_9.2_Expressions_60684095.dll",
+        "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.3-alpha\\lib/net6.0-windows7.0/LIB_PeopleSoft_9.2_Expressions_6585490.dll",
         "C:\\Users\\55648C\\.nuget\\packages\\markdig.signed\\0.21.1\\lib/netcoreapp3.1/Markdig.Signed.dll",
         "C:\\Users\\55648C\\.nuget\\packages\\microsoft.applicationinsights\\2.15.0\\lib/netstandard2.0/Microsoft.ApplicationInsights.dll",
         "C:\\Users\\55648C\\.nuget\\packages\\microsoft.aspnet.signalr.client\\2.4.0\\lib/netstandard2.0/Microsoft.AspNet.SignalR.Client.dll",
@@ -412,7 +412,7 @@
         "C:\\Users\\55648C\\.nuget\\packages\\uipath.vision\\3.10.1\\lib/net6.0-windows7.0/UiPath.Vision.Tesseract.dll",
         "C:\\Users\\55648C\\.nuget\\packages\\uipath.vision\\3.10.1\\lib/net6.0-windows7.0/UiPath.Vision.dll"
       ],
-      "Path": "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2\\1.0.2"
+      "Path": "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2\\1.0.3-alpha"
     }
   ],
   "Conflicts": [],
@@ -554,7 +554,7 @@
     },
     "LIB_PeopleSoft_9.2": {
       "Id": "LIB_PeopleSoft_9.2",
-      "Version": "1.0.2",
+      "Version": "1.0.3-alpha",
       "Dependencies": [
         {
           "Item1": "UiPath.System.Activities",
@@ -566,13 +566,13 @@
         },
         {
           "Item1": "LIB_PeopleSoft_9.2.Library.Runtime",
-          "Item2": "[1.0.2, )"
+          "Item2": "[1.0.3-alpha, )"
         }
       ]
     },
     "LIB_PeopleSoft_9.2.Library.Runtime": {
       "Id": "LIB_PeopleSoft_9.2.Library.Runtime",
-      "Version": "1.0.2",
+      "Version": "1.0.3-alpha",
       "Dependencies": [
         {
           "Item1": "UiPath.System.Runtime.Windows",
@@ -4918,27 +4918,27 @@
     {
       "Package": {
         "Id": "LIB_PeopleSoft_9.2",
-        "Version": "1.0.2"
+        "Version": "1.0.3-alpha"
       },
       "Assemblies": [],
-      "Path": "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2\\1.0.2"
+      "Path": "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2\\1.0.3-alpha"
     },
     {
       "Package": {
         "Id": "LIB_PeopleSoft_9.2.Library.Runtime",
-        "Version": "1.0.2"
+        "Version": "1.0.3-alpha"
       },
       "Assemblies": [
-        "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.2\\lib\\net6.0-windows7.0\\LIB_PeopleSoft_9.2.dll",
-        "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.2\\lib\\net6.0-windows7.0\\LIB_PeopleSoft_9.2_Expressions_13076248.dll",
-        "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.2\\lib\\net6.0-windows7.0\\LIB_PeopleSoft_9.2_Expressions_14336835.dll",
-        "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.2\\lib\\net6.0-windows7.0\\LIB_PeopleSoft_9.2_Expressions_16600924.dll",
-        "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.2\\lib\\net6.0-windows7.0\\LIB_PeopleSoft_9.2_Expressions_24393646.dll",
-        "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.2\\lib\\net6.0-windows7.0\\LIB_PeopleSoft_9.2_Expressions_35239291.dll",
-        "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.2\\lib\\net6.0-windows7.0\\LIB_PeopleSoft_9.2_Expressions_49214150.dll",
-        "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.2\\lib\\net6.0-windows7.0\\LIB_PeopleSoft_9.2_Expressions_7348436.dll"
+        "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.3-alpha\\lib\\net6.0-windows7.0\\LIB_PeopleSoft_9.2.dll",
+        "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.3-alpha\\lib\\net6.0-windows7.0\\LIB_PeopleSoft_9.2_Expressions_25360113.dll",
+        "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.3-alpha\\lib\\net6.0-windows7.0\\LIB_PeopleSoft_9.2_Expressions_45485984.dll",
+        "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.3-alpha\\lib\\net6.0-windows7.0\\LIB_PeopleSoft_9.2_Expressions_47888759.dll",
+        "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.3-alpha\\lib\\net6.0-windows7.0\\LIB_PeopleSoft_9.2_Expressions_49991340.dll",
+        "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.3-alpha\\lib\\net6.0-windows7.0\\LIB_PeopleSoft_9.2_Expressions_60082571.dll",
+        "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.3-alpha\\lib\\net6.0-windows7.0\\LIB_PeopleSoft_9.2_Expressions_60684095.dll",
+        "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.3-alpha\\lib\\net6.0-windows7.0\\LIB_PeopleSoft_9.2_Expressions_6585490.dll"
       ],
-      "Path": "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.2"
+      "Path": "C:\\Users\\55648C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.3-alpha"
     },
     {
       "Package": {
