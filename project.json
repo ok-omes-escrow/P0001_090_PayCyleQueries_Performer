@@ -1,5 +1,6 @@
 {
   "name": "P001_090_PayCycleQueries_Performer",
+  "projectId": "70f1527b-4908-475b-a2d9-78d4879e19da",
   "description": "This automation fetches vouchers from the queue and puts them on hold in Peoplesoft",
   "main": "Main.xaml",
   "dependencies": {
@@ -14,7 +15,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "23.4.5.0",
-  "projectVersion": "1.0.2-alpha",
+  "projectVersion": "1.0.3",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -87,7 +88,7 @@
         "fileName": "Tests\\WorkflowTestCaseTemplate.xaml"
       }
     ],
-    "modernBehavior": true
+    "saveToCloud": false
   },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
